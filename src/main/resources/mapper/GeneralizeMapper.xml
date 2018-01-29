@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.GeneralizeMapper" >
+    <!--查询文章总条数-->
+    <select id="queryTotals" resultType="long">
+        select count(*) from xxw_essay e where e.essayzt=1
+    </select>
+    <!--查询文章分页数据-->
+    <select id="queryspage" resultType="com.jk.pojo.Essay">
+        select * from xxw_essay e,xxw_eassytitle et where e.essaytitleid=et.id and  essayzt=1   ORDER BY votes DESC limit #{start},#{end}
+    </select>
+    <update id="updategeneralize">
+        update xxw_essay SET
+        <if test="identifying!=null and identifying==1">
+            generalize=1
+        </if>
+        <if test="identifying!=null and identifying==2">
+            generalize=0
+        </if>
+        where essayid =#{essayides}
+    </update>
+</mapper>
