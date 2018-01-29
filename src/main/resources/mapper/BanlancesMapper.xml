@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.BanlancesMapper" >
+  <resultMap id="BaseResultMap" type="com.jk.pojo.Banlances" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="balance" property="balance" jdbcType="INTEGER" />
+    <result column="money_status" property="moneyStatus" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="BaseResultMaps" type="com.jk.pojo.Users" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="fullname" property="fullname" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="balances" property="balances" jdbcType="INTEGER" />
+    <result column="money_stas" property="money_stas" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userid, balance, money_status
+  </sql>
+ <select id="queryusCount" resultType="java.lang.Long" >
+    select count(*)
+    from xxw_moneyinfo a ,xxw_users b
+   where a.userid = b.id
+  </select>
+
+  <select id="querybanlancePage"  resultMap="BaseResultMaps" >
+     select b.id,b.fullname,b.username,a.balance balances,a.money_status money_stas
+    from xxw_moneyinfo a ,xxw_users b
+   where a.userid = b.id limit  #{str} ,#{en}
+  </select>
+
+    <update id="updateStas" parameterType="com.jk.pojo.Banlances" >
+        update xxw_moneyinfo set money_status = #{money_status}
+        where userid = #{userid}
+    </update>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from xxw_moneyinfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.jk.pojo.Banlances" >
+    insert into xxw_moneyinfo (id, userid, balance, 
+      money_status)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{balance,jdbcType=INTEGER}, 
+      #{moneyStatus,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jk.pojo.Banlances" >
+    insert into xxw_moneyinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="balance != null" >
+        balance,
+      </if>
+      <if test="moneyStatus != null" >
+        money_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="balance != null" >
+        #{balance,jdbcType=INTEGER},
+      </if>
+      <if test="moneyStatus != null" >
+        #{moneyStatus,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="com.jk.pojo.Banlances" >
+    update xxw_moneyinfo
+    set userid = #{userid,jdbcType=INTEGER},
+      balance = #{balance,jdbcType=INTEGER},
+      money_status = #{moneyStatus,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

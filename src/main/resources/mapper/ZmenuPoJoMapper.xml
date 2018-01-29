@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.ZmenuPoJoMapper" >
+  <resultMap id="BaseResultMap" type="com.jk.pojo.ZmenuPoJo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="pid" property="pid" jdbcType="INTEGER" />
+    <result column="text" property="text" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, pid, text, url, status
+  </sql>
+
+<!--  总条数-->
+  <select id="queryTotal" resultType="long">
+    SELECT COUNT(*) FROM xxw_zmenu
+  </select>
+
+<!--  查询菜单数据-->
+  <select id="queryZmenu" resultType="com.jk.pojo.ZmenuPoJo">
+    SELECT * FROM xxw_zmenu WHERE ID limit #{st},#{ro}
+  </select>
+
+<!--  删除-->
+  <delete id="deleteZmenu">
+    delete from xxw_zmenu
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+<!--  新增菜单-->
+  <insert id="addZmenu" parameterType="com.jk.pojo.ZmenuPoJo" >
+    insert into xxw_zmenu (pid, text)
+    values (#{pid,jdbcType=VARCHAR},#{text,jdbcType=VARCHAR})
+  </insert>
+<!--回显-->
+  <select id="toupZmenu" resultType="com.jk.pojo.ZmenuPoJo">
+    SELECT * FROM xxw_zmenu where id=#{id}
+  </select>
+
+<!--  修改-->
+  <update id="updateZmenu" parameterType="com.jk.pojo.ZmenuPoJo" >
+    update xxw_zmenu
+    set pid = #{pid,jdbcType=INTEGER},
+      text = #{text,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

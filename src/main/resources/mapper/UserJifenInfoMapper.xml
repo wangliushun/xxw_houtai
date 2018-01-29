@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.UserJifenInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.jk.pojo.UserInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userinfo_username" property="userinfoUsername" jdbcType="VARCHAR" />
+    <result column="userinfo_password" property="userinfoPassword" jdbcType="VARCHAR" />
+    <result column="userinfo_userimg" property="userinfoUserimg" jdbcType="VARCHAR" />
+    <result column="userinfo_signature" property="userinfoSignature" jdbcType="VARCHAR" />
+    <result column="userinfo_integral" property="userinfoIntegral" jdbcType="INTEGER" />
+    <result column="userinfo_locationid" property="userinfoLocationid" jdbcType="INTEGER" />
+    <result column="userinfo_usersex" property="userinfoUsersex" jdbcType="INTEGER" />
+    <result column="userinfo_birthday" property="userinfoBirthday" jdbcType="VARCHAR" />
+    <result column="userinfo_lovestatus" property="userinfoLovestatus" jdbcType="INTEGER" />
+    <result column="userinfo_hometown" property="userinfoHometown" jdbcType="VARCHAR" />
+    <result column="userinfo_jobid" property="userinfoJobid" jdbcType="INTEGER" />
+    <result column="userinfo_email" property="userinfoEmail" jdbcType="VARCHAR" />
+    <result column="totalscores" property="totalscores" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userinfo_username, userinfo_password, userinfo_userimg, userinfo_signature, userinfo_integral, 
+    userinfo_locationid, userinfo_usersex, userinfo_birthday, userinfo_lovestatus, userinfo_hometown, 
+    userinfo_jobid, userinfo_email
+  </sql>
+  <select id="queryjifenCount" resultType="java.lang.Long" >
+    select count(*)
+    from xxw_user_jifen_info a ,xxw_userinfo b
+    where a.id = b.userinfo_integral
+  </select>
+
+  <select id="queryjifenPage"  resultMap="BaseResultMap" >
+     select b.id,b.userinfo_username,a.totalscore totalscores
+    from xxw_user_jifen_info a ,xxw_userinfo b
+   where a.id = b.userinfo_integral limit  #{str} ,#{end}
+
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from xxw_userinfo
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.jk.pojo.UserJifenInfo" >
+    insert into xxw_userinfo (id, userinfo_username, userinfo_password, 
+      userinfo_userimg, userinfo_signature, userinfo_integral, 
+      userinfo_locationid, userinfo_usersex, userinfo_birthday, 
+      userinfo_lovestatus, userinfo_hometown, userinfo_jobid, 
+      userinfo_email)
+    values (#{id,jdbcType=INTEGER}, #{userinfoUsername,jdbcType=VARCHAR}, #{userinfoPassword,jdbcType=VARCHAR}, 
+      #{userinfoUserimg,jdbcType=VARCHAR}, #{userinfoSignature,jdbcType=VARCHAR}, #{userinfoIntegral,jdbcType=INTEGER}, 
+      #{userinfoLocationid,jdbcType=INTEGER}, #{userinfoUsersex,jdbcType=INTEGER}, #{userinfoBirthday,jdbcType=VARCHAR}, 
+      #{userinfoLovestatus,jdbcType=INTEGER}, #{userinfoHometown,jdbcType=VARCHAR}, #{userinfoJobid,jdbcType=INTEGER}, 
+      #{userinfoEmail,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jk.pojo.UserJifenInfo" >
+    insert into xxw_userinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userinfoUsername != null" >
+        userinfo_username,
+      </if>
+      <if test="userinfoPassword != null" >
+        userinfo_password,
+      </if>
+      <if test="userinfoUserimg != null" >
+        userinfo_userimg,
+      </if>
+      <if test="userinfoSignature != null" >
+        userinfo_signature,
+      </if>
+      <if test="userinfoIntegral != null" >
+        userinfo_integral,
+      </if>
+      <if test="userinfoLocationid != null" >
+        userinfo_locationid,
+      </if>
+      <if test="userinfoUsersex != null" >
+        userinfo_usersex,
+      </if>
+      <if test="userinfoBirthday != null" >
+        userinfo_birthday,
+      </if>
+      <if test="userinfoLovestatus != null" >
+        userinfo_lovestatus,
+      </if>
+      <if test="userinfoHometown != null" >
+        userinfo_hometown,
+      </if>
+      <if test="userinfoJobid != null" >
+        userinfo_jobid,
+      </if>
+      <if test="userinfoEmail != null" >
+        userinfo_email,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoUsername != null" >
+        #{userinfoUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoPassword != null" >
+        #{userinfoPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoUserimg != null" >
+        #{userinfoUserimg,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoSignature != null" >
+        #{userinfoSignature,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoIntegral != null" >
+        #{userinfoIntegral,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoLocationid != null" >
+        #{userinfoLocationid,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoUsersex != null" >
+        #{userinfoUsersex,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoBirthday != null" >
+        #{userinfoBirthday,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoLovestatus != null" >
+        #{userinfoLovestatus,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoHometown != null" >
+        #{userinfoHometown,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoJobid != null" >
+        #{userinfoJobid,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoEmail != null" >
+        #{userinfoEmail,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jk.pojo.UserJifenInfo" >
+    update xxw_userinfo
+    <set >
+      <if test="userinfoUsername != null" >
+        userinfo_username = #{userinfoUsername,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoPassword != null" >
+        userinfo_password = #{userinfoPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoUserimg != null" >
+        userinfo_userimg = #{userinfoUserimg,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoSignature != null" >
+        userinfo_signature = #{userinfoSignature,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoIntegral != null" >
+        userinfo_integral = #{userinfoIntegral,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoLocationid != null" >
+        userinfo_locationid = #{userinfoLocationid,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoUsersex != null" >
+        userinfo_usersex = #{userinfoUsersex,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoBirthday != null" >
+        userinfo_birthday = #{userinfoBirthday,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoLovestatus != null" >
+        userinfo_lovestatus = #{userinfoLovestatus,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoHometown != null" >
+        userinfo_hometown = #{userinfoHometown,jdbcType=VARCHAR},
+      </if>
+      <if test="userinfoJobid != null" >
+        userinfo_jobid = #{userinfoJobid,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoEmail != null" >
+        userinfo_email = #{userinfoEmail,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jk.pojo.UserJifenInfo" >
+    update xxw_userinfo
+    set userinfo_username = #{userinfoUsername,jdbcType=VARCHAR},
+      userinfo_password = #{userinfoPassword,jdbcType=VARCHAR},
+      userinfo_userimg = #{userinfoUserimg,jdbcType=VARCHAR},
+      userinfo_signature = #{userinfoSignature,jdbcType=VARCHAR},
+      userinfo_integral = #{userinfoIntegral,jdbcType=INTEGER},
+      userinfo_locationid = #{userinfoLocationid,jdbcType=INTEGER},
+      userinfo_usersex = #{userinfoUsersex,jdbcType=INTEGER},
+      userinfo_birthday = #{userinfoBirthday,jdbcType=VARCHAR},
+      userinfo_lovestatus = #{userinfoLovestatus,jdbcType=INTEGER},
+      userinfo_hometown = #{userinfoHometown,jdbcType=VARCHAR},
+      userinfo_jobid = #{userinfoJobid,jdbcType=INTEGER},
+      userinfo_email = #{userinfoEmail,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
