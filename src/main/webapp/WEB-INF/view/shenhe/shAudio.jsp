@@ -121,7 +121,8 @@
                 action: function(dialog) {
                     if($("[name='audiozt']:checked").val()==undefined){
                         alert("请先选择是否审核通过");
-                    }else{
+                    }
+                    else{
                         $.ajax({
                             url:"shenhe/updateShAudiozt.do",
 

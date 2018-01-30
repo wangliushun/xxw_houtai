@@ -3,7 +3,7 @@ package com.jk.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.jk.pojo.*;
 import com.jk.service.UserService;
-import com.jk.util.Up;
+import com.jk.util.Up1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -121,7 +121,7 @@ public class UserController {
     @RequestMapping(value="uploadPhotoFile")
     @ResponseBody
     public String  uploadPhotoFile(MultipartFile artImg,HttpServletRequest req) throws IOException{
-        String upImag1 = Up.upImag1(artImg, req);
+        String upImag1 = Up1.upImag1(artImg, req);
         return upImag1;
     }
 

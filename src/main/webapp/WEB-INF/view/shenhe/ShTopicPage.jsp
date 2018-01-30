@@ -1,11 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
   User: Forever
-  Date: 2018/1/23
-  Time: 11:57
+  Date: 2018/1/22
+  Time: 19:22
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
+%>
 <html>
 <head>
     <title>Title</title>
@@ -61,8 +65,11 @@
                 },{
                     field: 'picurl',
                     title: '图片',
-                    width: 100
+                    width: 100,
+                    formatter:function (val,rowdata,rowIndex){
+                        return  "<img src='<%=basePath%>/"+rowdata.picurl+"' style='height: 80px;width: 80px'>";
 
+                    }
                 },{
                     field: 'topictypeid',
                     title: '菜单id',
