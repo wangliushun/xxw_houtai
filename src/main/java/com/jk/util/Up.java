@@ -32,7 +32,7 @@ public class Up {
         fos.close();
         System.out.println(onlyFileName);
         //返回
-        return "/upimg/"+onlyFileName;
+        return onlyFileName;
     }
     public static String upfile(MultipartFile upfile,HttpServletRequest req)throws IOException{
         //获取文件名
@@ -54,7 +54,7 @@ public class Up {
         fos.close();
         System.out.println(onlyFileName);
         //返回
-        return "/upfile/"+onlyFileName;
+        return onlyFileName;
     }
 
 }

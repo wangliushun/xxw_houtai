@@ -36,17 +36,21 @@
     </table>
     <c:forEach items="${eassyimg}" var="eassyimglist">
         <c:if test="${eassyimglist!=null}">
-            <a href="javascript:addeassyimg(${eassyimglist.essayimgname})">
+           <%-- <a href="javascript:addeassyimg('+${eassyimglist.essayimgname}+')">
                 <img src="<%=basePath%>${eassyimglist.essayimgname}" style="height: 80px;width: 80px">
+            </a>--%>
+            <a href='javascript:addeassyimg("${eassyimglist.essayimgname}")'>
+                <img src="<%=basePath%>//upimg//${eassyimglist.essayimgname}" style="height: 80px;width: 80px">
             </a>
         </c:if>
     </c:forEach>
 </form>
 
 <script type="text/javascript">
-function addeassyimg(names){
-    $("#essayimg").val(names);
-}
+    function addeassyimg(names){
+
+       $("#essayimg").val(names);
+    }
 
 </script>
 </body>
