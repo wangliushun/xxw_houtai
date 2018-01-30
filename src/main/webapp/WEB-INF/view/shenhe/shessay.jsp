@@ -96,7 +96,7 @@
                     title: '文章封面',
                     width: 100,
                     formatter:function (val,rowdata,rowIndex){
-                        return  "<img src='<%=basePath%>/"+rowdata.essayimg+"' style='height: 80px;width: 80px'>";
+                        return  "<img src='<%=basePath%>//upimg//"+row.essayimg+"' style='height: 80px;width: 80px'>";
 
                     }
 
