@@ -3,7 +3,7 @@ package com.jk.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.jk.pojo.*;
 import com.jk.service.UserService;
-/*import com.jk.util.Up;*/
+import com.jk.util.Up;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -118,12 +118,12 @@ public class UserController {
     }
 
     //上传图片
-   /* @RequestMapping(value="uploadPhotoFile")
+    @RequestMapping(value="uploadPhotoFile")
     @ResponseBody
     public String  uploadPhotoFile(MultipartFile artImg,HttpServletRequest req) throws IOException{
         String upImag1 = Up.upImag1(artImg, req);
         return upImag1;
-    }*/
+    }
 
     //新增话题
     @RequestMapping("saveTopic")
