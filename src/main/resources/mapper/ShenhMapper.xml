@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.ShenhMapper" >
+    <!--查询文章总条数-->
+    <select id="queryEssayTotal" resultType="long">
+         select count(*) from xxw_essay where essayzt=0
+    </select>
+    <!--查询文章的每页内容-->
+    <select id="queryShenEssayByPage" resultType="com.jk.pojo.Essay">
+          select * from xxw_essay where essayzt=0 and essayid limit #{st},#{ro}
+    </select>
+    <!--会先审核的文章信息-->
+    <select id="queryShenEssay" resultType="com.jk.pojo.Essay">
+         select * from xxw_essay where essayid = #{essayid}
+    </select>
+    <!--审核文章是否通过-->
+    <update id="updateShEssayzt" parameterType="com.jk.pojo.Anchor">
+          update xxw_essay set
+            essayzt = #{essayzt}
+            where essayid=#{essayid}
+        </update>
+  <!--==================================================================================================-->
+    <!--查询图片审核总条数-->
+    <select id="queryTopicTotal" resultType="long">
+        select count(*) from xxw_topic where topicshzt=0
+    </select>
+    <!--查询图片审核每页信息-->
+    <select id="queryShenTopicByPage" resultType="com.jk.pojo.Topic">
+        select * from xxw_topic where topicshzt=0 and id limit #{sta},#{row}
+    </select>
+    <!--//跳转审核话题页面并回显-->
+    <select id="queryShTopiczt" resultType="com.jk.pojo.Topic">
+        select * from xxw_topic where id=#{topicids}
+    </select>
+    <!--对图片话题审核-->
+    <update id="updateShTopiczt" parameterType="com.jk.pojo.Topic">
+        update xxw_topic set topicshzt=#{topic.topicshzt}
+        where id=#{topicidss}
+    </update>
+    <!--==================================================================================================-->
+    <!--查询图片审核总条数-->
+    <select id="queryAudioTotal" resultType="long">
+        select count(*) from xxw_audio where audiozt=0
+    </select>
+    <!--查询图片审核每页信息-->
+    <select id="queryShenAudioByPage" resultType="com.jk.pojo.Audio">
+        select * from xxw_audio where audiozt=0 and audioid limit #{start},#{rows}
+    </select>
+   <!-- ////跳转审核页面回显音频信息-->
+    <select id="queryShAudioz" resultType="com.jk.pojo.Audio">
+        select * from xxw_audio where audioid=#{audioid}
+    </select>
+    <!--对音频话题审核-->
+    <update id="updateShAudiozt" parameterType="com.jk.pojo.Audio">
+        update xxw_audio set audiozt=#{audiozt}
+        where audioid=#{audioid}
+    </update>
+    <!--==================================================================================================-->
+    <!--查询娱乐话题审核总条数-->
+    <select id="queryJokerTotal" resultType="long">
+        select count(*) from xxw_joker where jokershzt=0
+    </select>
+    <!--查询娱乐话题审核每页信息-->
+    <select id="queryShenJokerByPage" resultType="com.jk.pojo.Joker">
+        select * from xxw_joker where jokershzt=0 and id limit #{starts},#{rowss}
+    </select>
+    <!-- ////跳转娱乐话题审核页面回显音频信息-->
+    <select id="queryJokerzt" resultType="com.jk.pojo.Joker">
+        select * from xxw_joker where id=#{jokids}
+    </select>
+    <!--审核娱乐话题-->
+
+    <update id="updateShJokerzt" parameterType="com.jk.pojo.Joker">
+        update xxw_joker set jokershzt=#{joker.jokershzt}
+        where id=#{jokidss}
+    </update>
+</mapper>
