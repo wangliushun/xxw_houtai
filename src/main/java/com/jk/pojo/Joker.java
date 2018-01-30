@@ -95,4 +95,7 @@ public class Joker {
 	public void setJokershzt(Integer jokershzt) {
 		this.jokershzt = jokershzt;
 	}
+
+
+
 }

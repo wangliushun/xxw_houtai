@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.UserDao" >
+
+    <select id="queryMenuById" resultType="com.jk.pojo.MenuTree">
+        select m.id,m.text,m.pid,m.href  from xxw_sys_tree m where m.pid=#{pid}
+    </select>
+
+    <select id="queryzmenu" resultType="com.jk.pojo.ZmenuPoJo">
+        select *  from xxw_zmenu z  where z.pid=3
+    </select>
+
+    <!-- 根据menuid查询话题总条数 -->
+    <select id="queryTotaltop" resultType="long">
+        select count(*) from xxw_topic t,xxw_zmenu z where
+        t.topictypeid=z.id and t.topicshzt=1 and z.pid=3
+        <if test="topictypeid != null and topictypeid != 0">
+            and t.topictypeid=#{topictypeid}
+        </if>
+
+    </select>
+
+    <!-- 根据menuid查询话题 -->
+    <select id="querytoppage" resultType="com.jk.pojo.Topic">
+        select * from xxw_topic t,xxw_zmenu z where
+        t.topictypeid=z.id and t.topicshzt=1 and z.pid=3
+        <if test="top.topictypeid != null and top.topictypeid != 0">
+            and t.topictypeid=#{top.topictypeid}
+        </if>
+        and  t.id limit #{st},#{row}
+    </select>
+
+
+    <!-- 单条删除话题-->
+    <delete id="deletetopic">
+        delete from xxw_topic  where id=#{id}
+    </delete>
+
+    <!--新增话题 -->
+    <insert id="saveTopic">
+        insert into xxw_topic values(#{id},#{topicnr},#{topiczancount},#{picurl},#{topictypeid},#{uptime},#{upusername},#{topicshzt})
+    </insert>
+
+    <!-- 回显话题-->
+    <select id="queryTopicById" resultType="com.jk.pojo.Topic">
+        select * from xxw_topic t where  t.id=#{id}
+    </select>
+
+    <!-- 修改话题-->
+    <update id="updateTopic">
+        update xxw_topic set id=#{id},topicnr=#{topicnr},topiczancount=#{topiczancount},picurl=#{picurl},
+        topictypeid=#{topictypeid},uptime=#{uptime},upusername=#{upusername},topicshzt=#{topicshzt}
+        where id=#{id}
+    </update>
+
+
+    <select id="querytgById" resultType="com.jk.pojo.PicGroup">
+        select *  from xxw_picgroup where picgroupmenuid=#{picgroupmenuid}
+    </select>
+
+
+    <!-- 分页查询图片组总条数 -->
+    <select id="queryTotalPicGroup" resultType="long">
+        select count(*) from xxw_picgroup pg
+    </select>
+
+
+    <!-- 分页查询图片组 -->
+    <select id="queryPicGrouppage" resultType="com.jk.pojo.PicGroup">
+        select * from xxw_picgroup pg where  pg.id limit #{st},#{row}
+    </select>
+
+
+    <select id="queryTop" resultType="com.jk.pojo.Topic">
+        select * from xxw_topic t where  t.topictypeid=#{topictypeid} and t.topicshzt=1
+    </select>
+
+    <!-- 修改封面-->
+    <update id="updatePicGroupfm">
+        update xxw_picgroup set fmimgurl=#{fmimgurl}
+        where picgroupmenuid=#{picgroupmenuid}
+    </update>
+
+    <!-- 点赞-->
+    <update id="updatezanById">
+        update xxw_topic set topiczancount=topiczancount+1
+        where id=#{id}
+    </update>
+
+
+
+    <select id="querytgByTopId" resultType="com.jk.pojo.PicGroup">
+        select *  from xxw_picgroup where picgroupmenuid=#{picgroupmenuid}
+    </select>
+
+    <!-- 修改话题封面后自动改变封面-->
+
+    <update id="updatePicZufm">
+        update xxw_picgroup set fmimgurl=#{fmimgurl}
+        where picgroupmenuid=#{picgroupmenuid}
+    </update>
+
+
+    <!--新增话题评论-->
+    <insert id="savetoppl">
+        insert into xxw_topiccomment values(#{id},#{topicid},#{topcontent},#{topusername},#{toppltime},#{topplstate})
+    </insert>
+
+
+    <!-- 分页查询话题评论总条数 -->
+    <select id="queryTotaltopPl" resultType="long">
+        select count(*) from xxw_topiccomment  where topicid=#{topicid}
+    </select>
+
+
+    <!-- 分页查询话题评论 -->
+    <select id="querytopPlpage" resultType="com.jk.pojo.TopicComment">
+        select * from xxw_topiccomment  where topicid=#{t.topicid}
+        and  id limit #{st},#{row}
+    </select>
+
+
+    <!-- 单条删除话题评论-->
+    <delete id="deletetopplbyId">
+        delete from xxw_topiccomment  where id=#{id}
+    </delete>
+</mapper>
