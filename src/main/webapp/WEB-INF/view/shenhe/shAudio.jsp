@@ -119,26 +119,31 @@
             buttons: [{
                 label: '审核',
                 action: function(dialog) {
-                    $.ajax({
-                        url:"shenhe/updateShAudiozt.do",
+                    if($("[name='audiozt']:checked").val()==undefined){
+                        alert("请先选择是否审核通过");
+                    }else{
+                        $.ajax({
+                            url:"shenhe/updateShAudiozt.do",
 
-                        type:"post",
+                            type:"post",
 
-                        data:$("#shenheAudio-Info").serialize(),
+                            data:$("#shenheAudio-Info").serialize(),
 
-                        dataType:"text",
-                        async:false,
-                        success:function (data){
-                            if(data>0){
-                                alert("审核成功");
-                                dialog.close();
-                                $("#shehheAudio-table").bootstrapTable('refresh');
+                            dataType:"text",
+                            async:false,
+                            success:function (data){
+                                if(data>0){
+                                    alert("审核成功");
+                                    dialog.close();
+                                    $("#shehheAudio-table").bootstrapTable('refresh');
+                                }
+                            },
+                            error:function (){
+                                alert("审核出错，请检查程序");
                             }
-                        },
-                        error:function (){
-                            alert("审核出错，请检查程序");
-                        }
-                    })
+                        })
+                    }
+
                 }
             }, {
                 label: '取消',

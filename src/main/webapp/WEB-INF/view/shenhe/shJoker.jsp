@@ -122,26 +122,30 @@
             buttons: [{
                 label: '审核',
                 action: function(dialog) {
-                    $.ajax({
-                        url:"shenhe/updateShJokerzt.do?jokids="+jokids,
+                    if($("[name='jokershzt']:checked").val()==undefined){
+                        alert("请先选择是否审核通过");
+                    }else{
+                        $.ajax({
+                            url:"shenhe/updateShJokerzt.do?jokids="+jokids,
 
-                        type:"post",
+                            type:"post",
 
-                        data:$("#shenheJoker-Info").serialize(),
+                            data:$("#shenheJoker-Info").serialize(),
 
-                        dataType:"text",
-                        async:false,
-                        success:function (data){
-                            if(data>0){
-                                alert("审核成功");
-                                dialog.close();
-                                $("#shehheJoker-table").bootstrapTable('refresh');
+                            dataType:"text",
+                            async:false,
+                            success:function (data){
+                                if(data>0){
+                                    alert("审核成功");
+                                    dialog.close();
+                                    $("#shehheJoker-table").bootstrapTable('refresh');
+                                }
+                            },
+                            error:function (){
+                                alert("审核出错，请检查程序");
                             }
-                        },
-                        error:function (){
-                            alert("审核出错，请检查程序");
-                        }
-                    })
+                        })
+                    }
                 }
             }, {
                 label: '取消',
