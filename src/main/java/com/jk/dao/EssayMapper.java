@@ -32,4 +32,6 @@ public interface EssayMapper {
     List<EssayTitle> queryEssayCommentpage(@Param("start") int start, @Param("end") int end, @Param("essayComment") EssayComment essayComment, @Param("essayides") Integer essayides);
 
     int addEssayComment(EssayComment essayComment);
+
+    int addessayimg(Essay essay);
 }
