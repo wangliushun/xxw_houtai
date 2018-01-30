@@ -113,23 +113,28 @@
             buttons: [{
                 label: '审核',
                 action: function(dialog) {
-                    $.ajax({
-                        url:"shenhe/updateShTopiczt.do?topicids="+topicids,
-                        type:"post",
-                        data:$("#shehheTopic-Info").serialize(),
-                        dataType:"text",
-                        async:false,
-                        success:function (data){
-                            if(data>0){
-                                alert("审核成功");
-                                dialog.close();
-                                $("#shehheTopic-table").bootstrapTable('refresh');
+                    if($("[name='topicshzt']:checked").val()==undefined){
+                        alert("请先选择是否审核通过");
+                    }else{
+                        $.ajax({
+                            url:"shenhe/updateShTopiczt.do?topicids="+topicids,
+                            type:"post",
+                            data:$("#shehheTopic-Info").serialize(),
+                            dataType:"text",
+                            async:false,
+                            success:function (data){
+                                if(data>0){
+                                    alert("审核成功");
+                                    dialog.close();
+                                    $("#shehheTopic-table").bootstrapTable('refresh');
+                                }
+                            },
+                            error:function (){
+                                alert("审核出错，请检查程序");
                             }
-                        },
-                        error:function (){
-                            alert("审核出错，请检查程序");
-                        }
-                    })
+                        })
+                    }
+
                 }
             }, {
                 label: '取消',

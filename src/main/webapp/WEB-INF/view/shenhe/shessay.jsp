@@ -142,26 +142,31 @@
             buttons: [{
                 label: '审核',
                 action: function(dialog) {
-                    $.ajax({
-                        url:"shenhe/updateShEssayzt.do",
+                    if($("[name='essayzt']:checked").val()==undefined){
+                        alert("请先选择是否审核通过");
+                    }else{
+                        $.ajax({
+                            url:"shenhe/updateShEssayzt.do",
 
-                        type:"post",
+                            type:"post",
 
-                        data:$("#shenhe-Info").serialize(),
+                            data:$("#shenhe-Info").serialize(),
 
-                        dataType:"text",
-                        async:false,
-                        success:function (data){
-                            if(data>0){
-                                alert("审核成功");
-                                dialog.close();
-                                $("#shehhe-table").bootstrapTable('refresh');
+                            dataType:"text",
+                            async:false,
+                            success:function (data){
+                                if(data>0){
+                                    alert("审核成功");
+                                    dialog.close();
+                                    $("#shehhe-table").bootstrapTable('refresh');
+                                }
+                            },
+                            error:function (){
+                                alert("审核出错，请检查程序");
                             }
-                        },
-                        error:function (){
-                            alert("审核出错，请检查程序");
-                        }
-                    })
+                        })
+                    }
+
                 }
             }, {
                 label: '取消',
