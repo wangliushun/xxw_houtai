@@ -53,7 +53,7 @@ public class EssayController {
         return "../essay/addeassytitle";
     }
     /**
-     * 新增投稿
+     * 新增征文标题
      * @return
      */
     @RequestMapping("/addeassytitle")
