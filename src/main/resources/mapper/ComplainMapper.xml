@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.ComplainMapper" >
+  <sql id="Base_Column_List" >
+    comid, complainuserid, complaininfo, complaintime , fullname comfullname  ,id,fullname,username,password
+  </sql>
+
+  <sql id="Bas" >
+    comid, complainuserid, complaininfo, complaintime,fullname comfullname  ,id,fullname,username,password ,replyid, replyuserid  crid, replyneirong comreplyneirong, replydata comreplydata,comrepid
+  </sql>
+
+  <select id="queryStutol" resultType="long">
+    select count(*) from xxw_complain c,xxw_users u where c.complainuserid=u.id
+  </select>
+
+  <select id="querySer" resultType="com.jk.pojo.Complain">
+    select
+     <include refid="Base_Column_List"/>
+    from xxw_complain c ,xxw_users u where c.complainuserid=u.id
+    and c.comid limit #{start},#{rows}
+  </select>
+
+
+  <insert id="addcomplain">
+    insert into xxw_complain
+    values(#{comid},1,#{complaininfo},#{complaintime})
+  </insert>
+
+
+  <delete id="deleteCom">
+    delete from  xxw_complain  where comid = #{comid}
+  </delete>
+<delete id="deletevor">
+    delete  from xxw_reply_complain where comrepid = #{comid}
+
+</delete>
+
+  <select id="queryRay" resultType="long">
+  select count(*) from xxw_complain c,xxw_users u,xxw_reply_complain r
+   where c.complainuserid=u.id and c.comid=r.comrepid
+  </select>
+
+  <select id="queryRaysty" resultType="com.jk.pojo.Complain" >
+  select
+    <include refid="Bas"/>
+   from xxw_reply_complain r, xxw_complain c, xxw_users u
+ where c.complainuserid=u.id and c.comid=r.comrepid
+      and c.comid limit #{start},#{rows}
+  </select>
+
+  <select id="queryRa" resultType="com.jk.pojo.Complain">
+    select
+   comreplyid,  id,fullname comrepname,username,password ,replyid, replyuserid, replyneirong, replydata,comrepid
+    from xxw_reply_complain r, xxw_complain c, xxw_users u
+    where r.replyuserid = u.id and c.comreplyid = r.replyuserid
+  </select>
+
+    <insert id="addResi">
+insert into xxw_reply_complain
+    values(#{reply.replyid},2,#{reply.replyneirong},#{reply.replydata},#{redit})
+
+    </insert>
+
+</mapper>
