@@ -22,18 +22,24 @@
     userinfo_locationid, userinfo_usersex, userinfo_birthday, userinfo_lovestatus, userinfo_hometown, 
     userinfo_jobid, userinfo_email
   </sql>
-  <select id="queryjifenCount" resultType="java.lang.Long" >
-    select count(*)
-    from xxw_user_jifen_info a ,xxw_userinfo b
-    where a.id = b.userinfo_integral
+  <select id="queryJifenInfo" resultType="com.jk.pojo.UserJifenInfo">
+    SELECT * from xxw_user_jifen_info where articleid=#{id}
   </select>
 
-  <select id="queryjifenPage"  resultMap="BaseResultMap" >
-     select b.id,b.userinfo_username,a.totalscore totalscores
-    from xxw_user_jifen_info a ,xxw_userinfo b
-   where a.id = b.userinfo_integral limit  #{str} ,#{end}
 
+  <select id="querygiftCount" resultType="java.lang.Long" >
+    select count(*) from xxw_gifts
   </select>
+
+  <select id="querygiftPage" resultType="com.jk.pojo.Gifts">
+    SELECT * from xxw_gifts where 1=1 and id limit  #{str} ,#{end}
+  </select>
+
+
+  <update id="updatejifen" parameterType="com.jk.pojo.UserJifenInfo">
+      UPDATE xxw_user_jifen_info SET totalscore = totalscore - #{jifen} WHERE articleid=#{ids}
+  </update>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from xxw_userinfo
     where id = #{id,jdbcType=INTEGER}
