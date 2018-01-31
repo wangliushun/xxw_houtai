@@ -2,10 +2,7 @@ package com.jk.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.jk.dao.EssayMapper;
-import com.jk.pojo.Essay;
-import com.jk.pojo.EssayComment;
-import com.jk.pojo.EssayTitle;
-import com.jk.pojo.Essayimg;
+import com.jk.pojo.*;
 import com.jk.service.EssayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,11 +34,18 @@ public class EssayServiceImpl implements EssayService {
 
     @Override
     public int addessay(Essay essay,EssayTitle essayTitle, HttpSession session) {
+        Users loginUser = (Users) session.getAttribute("loginUser");
+        essay.setUserfullname(loginUser.getFullname());
+        essay.setUserid(loginUser.getId());
         SimpleDateFormat sim= new SimpleDateFormat("yyyy-MM-dd");
         essay.setEssaytitleid(essayTitle.getId());
         essay.setEssaystarttime(sim.format(new Date()));
         essay.setEssaytitlename(essayTitle.getEssaytitlename());
-        return essayMapper.addessay(essay);
+        int a =essayMapper.addessay(essay);
+        if(a==1){
+            a=essayMapper.addessayimg(essay);
+        }
+        return a;
     }
 
     @Override

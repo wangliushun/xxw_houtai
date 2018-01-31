@@ -26,7 +26,7 @@
         <tr>
             <td >投稿结束日期</td>
             <td >
-                <input  class="Wdate" name="endtime" onFocus="WdatePicker()"/>
+                <input  class="Wdate" name="endtime" onclick="WdatePicker()"/>
             </td>
         </tr>
     </table>

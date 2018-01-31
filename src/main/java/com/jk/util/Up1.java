@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-public class Up {
+public class Up1 {
 
     public static String upImag1(MultipartFile artImg,HttpServletRequest req) throws IOException{
         //获取文件名
@@ -32,7 +32,7 @@ public class Up {
         fos.close();
         System.out.println(onlyFileName);
         //返回
-        return onlyFileName;
+        return "/upimg/"+onlyFileName;
     }
     public static String upfile(MultipartFile upfile,HttpServletRequest req)throws IOException{
         //获取文件名
@@ -54,7 +54,7 @@ public class Up {
         fos.close();
         System.out.println(onlyFileName);
         //返回
-        return onlyFileName;
+        return "/upfile/"+onlyFileName;
     }
 
 }

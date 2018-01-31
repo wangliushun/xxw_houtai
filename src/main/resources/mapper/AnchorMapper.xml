@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.AnchorMapper" >
+
+  <!--   查询总条数 -->
+  <select id="queryAnchorTotal" resultType="long">
+      select count(*) from xxw_anchor where 1=1
+  </select>
+  <!--   分页查询 -->
+  <select id="queryAnchorByPage"  resultType="com.jk.pojo.Anchor" >
+      select * from  xxw_anchor where id
+      limit #{star},#{rows}
+  </select>
+
+<!--删除-->
+
+    <delete id="deleteAnchor">
+        delete from xxw_anchor where id=#{id}
+    </delete>
+    <!--回显-->
+    <select id="queryAnchorById" resultType="com.jk.pojo.Anchor">
+        select * from xxw_anchor where id = #{id}
+    </select>
+    <!--修改-->
+    <update id="updateAnchor" parameterType="com.jk.pojo.Anchor" >
+        update xxw_anchor set
+        name= #{password},
+        idcard= #{password},
+        account= #{password},
+        password = #{password}
+        where id=#{id}
+    </update>
+    <!--回显-->
+    <select id="plQueryAnchor" resultType="com.jk.pojo.Anchor">
+        select * from xxw_anchor where id = #{id}
+    </select>
+   <!-- 批量修改-->
+    <update id="updatePlAnchor">
+        update xxw_anchor set password =#{p} where id =#{m}
+    </update>
+    <!--新增主播-->
+    <insert id="addAnchor">
+        insert into xxw_anchor(name,idcard,account,password)values(#{name},#{idcard},#{account},#{password})
+    </insert>
+
+</mapper>

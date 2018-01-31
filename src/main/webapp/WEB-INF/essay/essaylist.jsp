@@ -83,7 +83,7 @@
                     width: 50,
                     formatter:function(value,row,index){
 
-                        return  "<img src='<%=basePath%>/"+row.essayimg+"' style='height: 80px;width: 80px'>";
+                        return  "<img src='<%=basePath%>//upimg//"+row.essayimg+"' style='height: 80px;width: 80px'>";
 
                     }
                 },{
@@ -122,6 +122,7 @@
             }
         })
     }
+
     function addEssayComment(essayid,votes) {
         BootstrapDialog.show({
             title: '投稿',

@@ -52,4 +52,8 @@
   <insert id="addEssayComment">
     insert into xxw_essay_comment values(#{id},#{userid},#{commentcontent},#{commenttime},#{essayides})
   </insert>
+  <!--新增文章封面-->
+  <insert id="addessayimg">
+    insert into xxw_essayimg values(null,#{essayimg})
+  </insert>
 </mapper>

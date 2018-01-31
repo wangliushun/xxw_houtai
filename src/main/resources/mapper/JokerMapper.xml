@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.JokerDao" >
+
+    <!-- 查询zmenu获取娱乐类型 -->
+    <select id="queryjokerzmenu" resultType="com.jk.pojo.ZmenuPoJo">
+        select *  from xxw_zmenu z  where z.pid=5
+    </select>
+
+
+    <!-- 根据menuid查询娱乐话题总条数 -->
+    <select id="queryTotaljoker" resultType="long">
+        select count(*) from xxw_joker j,xxw_zmenu z where
+        j.typesid=z.id and j.jokershzt=1 and z.pid=5
+        <if test="typesid != null and typesid != 0">
+            and j.typesid=#{typesid}
+        </if>
+    </select>
+
+    <!-- 根据menuid查询娱乐话题 -->
+    <select id="queryjokerpage" resultType="com.jk.pojo.Joker">
+        select * from xxw_joker j,xxw_zmenu z where
+        j.typesid=z.id and j.jokershzt=1 and z.pid=5
+        <if test="jo.typesid != null and jo.typesid != 0">
+            and j.typesid=#{jo.typesid}
+        </if>
+        and  j.id limit #{st},#{row}
+    </select>
+
+
+    <!-- 踩与赞-->
+    <update id="updatecaizan">
+        update xxw_joker set
+        <if test="flag==1">
+            cai=cai+1
+        </if>
+        <if test="flag==2">
+            zan=zan+1
+        </if>
+        where id=#{j.id}
+    </update>
+
+
+    <!-- 单条删除娱乐话题-->
+    <delete id="deletejoker">
+        delete from xxw_joker  where id=#{id}
+    </delete>
+
+
+    <!--新增娱乐话题 -->
+    <insert id="saveJoker">
+        insert into xxw_joker values(#{id},#{title},#{uptimes},#{content},#{typesid},#{publisher},#{cai},#{zan},#{jokershzt})
+    </insert>
+
+
+    <!-- 回显娱乐话题-->
+    <select id="queryjokerByJokerId" resultType="com.jk.pojo.Joker">
+        select * from xxw_joker  where  id=#{id}
+    </select>
+
+    <!-- 修改娱乐话题-->
+    <update id="updateJoker">
+        update xxw_joker set id=#{id},title=#{title},uptimes=#{uptimes},content=#{content},
+        typesid=#{typesid},publisher=#{publisher},cai=#{cai},zan=#{zan},jokershzt=#{jokershzt}
+        where id=#{id}
+    </update>
+
+
+    <!--新增娱乐话题评论-->
+    <insert id="savepl">
+        insert into xxw_jokercomment values(#{id},#{jokerid},#{content},#{username},#{pltime},#{plstate})
+    </insert>
+
+
+    <!-- 分页查询评论总条数 -->
+    <select id="queryTotalPl" resultType="long">
+        select count(*) from xxw_jokercomment  where jokerid=#{jokerid}
+    </select>
+
+
+    <!-- 分页查询评论 -->
+    <select id="queryPlpage" resultType="com.jk.pojo.JokerComment">
+        select * from xxw_jokercomment  where jokerid=#{jc.jokerid}
+        and  id limit #{st},#{row}
+    </select>
+
+
+    <!-- 单条删除评论-->
+    <delete id="deleteplbyId">
+        delete from xxw_jokercomment  where id=#{id}
+    </delete>
+</mapper>
