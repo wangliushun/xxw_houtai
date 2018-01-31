@@ -39,5 +39,22 @@ public class BanlanceServiceImpl implements BalanceService{
         return banlancesMapper.updateStas(bl);
     }
 
+    @Override
+    public int updatebanlances(Banlances bl,Integer userids) {
+        int a =banlancesMapper.updatebanlances(bl);
+        if(a==1){
+            a=banlancesMapper.plusbanlances(bl.getBalance(),userids);
+        }
+        return a;
+
+    }
+
+    @Override
+    public List<Users> toupdatebanlances() {
+        return banlancesMapper.toupdatebanlances();
+    }
+
+
+
 
 }

@@ -74,7 +74,7 @@
                     width: 100,
                     formatter: function(value,row,index){
 
-                        return row.money_stas == 1?"<input type='button' value='解冻' onclick='toupdate(\""+row.id+"\",\""+row.money_stas+"\")'/>":"<input type='button' value='冻结' onclick='toupdate(\""+row.id+"\",\""+row.money_stas+"\")'/><input type='button' value='转账'>";
+                        return row.money_stas == 1?"<input type='button' value='解冻' onclick='toupdate(\""+row.id+"\",\""+row.money_stas+"\")'/>":"<input type='button' value='冻结' onclick='toupdate(\""+row.id+"\",\""+row.money_stas+"\")'/><input type='button'onclick='toupdatebanlances(\""+row.id+"\","+row.balances+",\""+row.username+"\")' value='转账'>";
                     }
                 }/*,{
                     field: 'ss',
@@ -104,6 +104,41 @@
 
        }
 
+        function toupdatebanlances(id,balances,username) {
+                BootstrapDialog.show({
+                title: '转账',
+                message: $('<div></div>').load('<%=request.getContextPath()%>/banlances/toupdatebanlances?balances='+balances+'&username='+username+'&id='+id),
+                     buttons: [{
+                    label: '保存',
+                    action: function(dialog) {
+                        var aa =$("[name='balance']").val();
+                        if(balances>=aa){
+                            $.ajax({
+                                url:"/banlances/updatebanlances?userid="+id+"&balance="+aa+"&userids="+$("#jsid").val(),
+                                type:"post",
+                                data:$("#upban-form").serialize(),
+                                success:function (data){
+                                    alert("修改成功");
+                                    dialog.close();
+                                    $("#ban-table").bootstrapTable('refresh');
+                                },
+                                error:function (){
+                                    alert("修改错误")
+                                }
+                            })
+                        }else {
+                            alert("余额不足")
+                        }
+
+                    }
+                }, {
+                    label: '取消',
+                    action: function(dialog) {
+                        dialog.close();
+                    }
+                }]
+            });
+        }
     </script>
 </body>
 </html>

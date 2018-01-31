@@ -41,7 +41,11 @@ public class EssayServiceImpl implements EssayService {
         essay.setEssaytitleid(essayTitle.getId());
         essay.setEssaystarttime(sim.format(new Date()));
         essay.setEssaytitlename(essayTitle.getEssaytitlename());
-        return essayMapper.addessay(essay);
+        int a =essayMapper.addessay(essay);
+        if(a==1){
+            a=essayMapper.addessayimg(essay);
+        }
+        return a;
     }
 
     @Override

@@ -24,4 +24,12 @@ public interface BanlancesMapper {
     List<Users> querybanlancePage(@Param("str") int start,@Param("en") int end);
 
     int updateStas(Banlances bl);
+
+    int updatebanlances(Banlances bl);
+
+
+    List<Users> toupdatebanlances();
+
+
+    int plusbanlances(@Param("balance")Integer balance,@Param("userids") Integer userids);
 }
