@@ -33,4 +33,6 @@ public interface ShenhService {
     Joker queryJokerzt(Integer jokids);
     //审核娱乐话题
     int updateShJokerzt(Integer jokids, Joker joker);
+    //根据ID回显
+    Essay showwzxq(Integer essayid);
 }

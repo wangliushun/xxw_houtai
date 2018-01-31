@@ -10,8 +10,6 @@ import java.util.List;
 
 public interface ShenhMapper {
     //查询文章总条数
-
-
     long queryEssayTotal(Essay ess);
     //查询文章每页信息
     List<Essay> queryShenEssayByPage(@Param("st") int start, @Param("ro") int rows, @Param("es") Essay ess);
@@ -44,4 +42,8 @@ public interface ShenhMapper {
     Joker queryJokerzt(Integer jokids);
     //审核娱乐话题
     int updateShJokerzt(@Param("jokidss") Integer jokids, @Param("joker") Joker joker);
+
+    Essay showwzxq(Integer essayid);
+    //修改文章积分
+    int updatejf(Integer userid);
 }

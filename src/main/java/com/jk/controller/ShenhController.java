@@ -38,7 +38,7 @@ public class ShenhController {
     @RequestMapping("toShEssayzt")
     public String toShEssayzt(HttpServletRequest request, Essay ess){
         ess=shenhService.queryShenEssay(ess.getEssayid());
-        request.setAttribute("essinfo",ess);
+        request.setAttribute("esslist",ess);
         return "shenhe/ShEssayztPage";
     }
     //审核提交内容
@@ -131,6 +131,14 @@ public class ShenhController {
         int a=shenhService.updateShJokerzt(jokids,joker);
         return a;
     }
+    //跳转到文章详情回显
+    @RequestMapping("toshowssay")
+    public String toshowssay(HttpServletRequest request,Essay ess){
+        ess=shenhService.showwzxq(ess.getEssayid());
+        request.setAttribute("esslist",ess);
+        return "shenhe/wzxq";
+    }
+
 
 
 }

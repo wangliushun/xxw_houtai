@@ -34,7 +34,11 @@ public class ShenhServiceImpl implements ShenhService {
 
     @Override//审核文章
     public int updateShEssayzt(Essay ess) {
-        return shenhMapper.updateShEssayzt(ess);
+        int zt=shenhMapper.updateShEssayzt(ess);
+        if(zt==1){
+            zt=shenhMapper.updatejf(ess.getUserid());
+        }
+        return zt;
     }
 
     @Override //查询图片审核分页
@@ -101,6 +105,11 @@ public class ShenhServiceImpl implements ShenhService {
     @Override//审核娱乐话题
     public int updateShJokerzt(Integer jokids, Joker joker) {
         return shenhMapper.updateShJokerzt(jokids,joker);
+    }
+
+    @Override
+    public Essay showwzxq(Integer essayid) {
+        return shenhMapper.showwzxq(essayid);
     }
 
 
