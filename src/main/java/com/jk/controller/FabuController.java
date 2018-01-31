@@ -33,7 +33,7 @@ public class FabuController {
     public String torenwu(){
       return "manager/renwulist";
     }
-    //分页查询发布任务
+    //分页查询发布任务的
     @RequestMapping("queryFabuByPage")
     @ResponseBody
     public Object queryFabuByPage(int page,int rows,Fabus fb){

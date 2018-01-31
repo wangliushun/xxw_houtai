@@ -20,7 +20,7 @@ public class FabuServiceImpl implements FabuService {
         return fabusMapper.addRenWu(fb);
     }
 
-    @Override
+    @Override//查询
     public JSONObject queryFabuByPage(int page, int rows, Fabus fb) {
         long total = fabusMapper.queryFabuTotal(fb);
         //起始位置
