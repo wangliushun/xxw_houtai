@@ -4,4 +4,13 @@
   <insert id="addRenWu">
       insert into xxw_fabu(acceptid,rwtype,acceptzt,finishzt,shzts) values(#{username},#{text},0,0,0)
   </insert>
+    <!--   查询总条数 -->
+    <select id="queryFabuTotal" resultType="long">
+        select count(*) from xxw_fabu where 1=1
+    </select>
+    <!--   分页查询 -->
+    <select id="queryFabuByPage"  resultType="com.jk.pojo.Fabus" >
+        select * from  xxw_fabu where publishid
+        limit #{star},#{rows}
+    </select>
 </mapper>

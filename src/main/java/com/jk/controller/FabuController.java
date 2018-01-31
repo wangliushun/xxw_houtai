@@ -1,5 +1,6 @@
 package com.jk.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.jk.pojo.Anchor;
 import com.jk.pojo.Fabus;
 import com.jk.pojo.ZmenuPoJo;
@@ -27,5 +28,17 @@ public class FabuController {
       int a=fabuService.addRenWu(fb);
       return a;
   }
+  //跳转到查询任务列表
+    @RequestMapping("torenwu")
+    public String torenwu(){
+      return "manager/renwulist";
+    }
+    //分页查询发布任务
+    @RequestMapping("queryFabuByPage")
+    @ResponseBody
+    public Object queryFabuByPage(int page,int rows,Fabus fb){
+        JSONObject json=fabuService.queryFabuByPage(page,rows,fb);
+        return json;
+    }
 
 }
