@@ -35,6 +35,18 @@
         where userid = #{userid}
     </update>
 
+    <update id="updatebanlances" parameterType="com.jk.pojo.Banlances" >
+        update xxw_moneyinfo set balance = balance - #{balance}
+        where userid = #{userid}
+    </update>
+    <update id="plusbanlances" parameterType="com.jk.pojo.Banlances" >
+        update xxw_moneyinfo set balance = balance + #{balance}
+        where userid = #{userids}
+    </update>
+    <select id="toupdatebanlances" resultType="com.jk.pojo.Users">
+      SELECT * from xxw_users
+    </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from xxw_moneyinfo
     where id = #{id,jdbcType=INTEGER}
