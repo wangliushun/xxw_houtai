@@ -8,6 +8,10 @@ public class Users {
     private String username;
 
     private String password;
+
+    private Integer userlevel;
+    private Integer userzt;
+
     /*业务字段*/
     private Integer balances;
     private Integer money_stas;
@@ -57,5 +61,21 @@ public class Users {
 
     public void setMoney_stas(Integer money_stas) {
         this.money_stas = money_stas;
+    }
+
+    public Integer getUserlevel() {
+        return userlevel;
+    }
+
+    public void setUserlevel(Integer userlevel) {
+        this.userlevel = userlevel;
+    }
+
+    public Integer getUserzt() {
+        return userzt;
+    }
+
+    public void setUserzt(Integer userzt) {
+        this.userzt = userzt;
     }
 }

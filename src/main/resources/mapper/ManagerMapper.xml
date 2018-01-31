@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jk.dao.ManagerMapper" >
+
+    <select id="queryUserInfo" resultType="com.jk.pojo.Users">
+      select * from xxw_users
+    </select>
+    <select id="queryZhutiInfo" resultType="com.jk.pojo.ZmenuPoJo">
+        select * from xxw_zmenu
+    </select>
+</mapper>

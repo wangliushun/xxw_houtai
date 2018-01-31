@@ -96,7 +96,7 @@
                     title: '文章封面',
                     width: 100,
                     formatter:function (val,rowdata,rowIndex){
-                        return  "<img src='<%=basePath%>/"+rowdata.essayimg+"' style='height: 80px;width: 80px'>";
+                        return  "<img src='<%=basePath%>//upimg//"+rowdata.essayimg+"' style='height: 80px;width: 80px'>";
 
                     }
 
@@ -124,6 +124,14 @@
                     width: 100,
                     formatter:function (val,rowdata,rowIndex){
                         return "<input type='button' value='审核'  onClick='toUpdateShEssayzt(\""+rowdata.essayid+"\")'/>";
+                    }
+
+                },{
+                    field: 'n',
+                    title: '查看文章详情',
+                    width: 100,
+                    formatter:function (val,rowdata,rowIndex){
+                        return "<input type='button' value='查看文章详情'  onClick='toShowEssayzt(\""+rowdata.essayid+"\")'/>";
                     }
 
                 }
@@ -179,7 +187,7 @@
         });
     }
 
-    $('#shehhe-table').on('click-row.bs.table', function (e, row, element){
+/*    $('#shehhe-table').on('click-row.bs.table', function (e, row, element){
         BootstrapDialog.show({
             title: '文章内容详情',
             message: $('<div>'+row.essaycontent+'</div>'),
@@ -190,7 +198,21 @@
                 }
             }]
         });
+    });*/
+
+function toShowEssayzt(eid){
+    BootstrapDialog.show({
+
+        title: '文章内容详情',
+        message: $('<div></div>').load('shenhe/toshowssay.do?essayid='+eid),
+        buttons: [ {
+            label: '确定',
+            action: function(dialog) {
+                dialog.close();
+            }
+        }]
     });
+}
 
 </script>
 

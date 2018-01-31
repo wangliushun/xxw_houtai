@@ -67,9 +67,11 @@
                     title: '图片',
                     width: 100,
                     formatter:function (val,rowdata,rowIndex){
+
                         return  "<img src='<%=basePath%>/"+rowdata.picurl+"' style='height: 80px;width: 80px'>";
 
                     }
+
                 },{
                     field: 'topictypeid',
                     title: '菜单id',

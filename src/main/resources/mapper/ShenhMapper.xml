@@ -19,6 +19,16 @@
             essayzt = #{essayzt}
             where essayid=#{essayid}
         </update>
+    <!-- ////回显文章详情-->
+    <select id="showwzxq" resultType="com.jk.pojo.Essay">
+        select * from xxw_essay where essayid=#{essayid}
+    </select>
+    <!--审核通过的文章为用户修改积分-->
+    <update id="updatejf" parameterType="com.jk.pojo.UserJifenInfo">
+        update xxw_user_jifen_info set
+        totalscore =totalscore+5
+        where articleid=#{userid}
+    </update>
   <!--==================================================================================================-->
     <!--查询图片审核总条数-->
     <select id="queryTopicTotal" resultType="long">
@@ -74,4 +84,5 @@
         update xxw_joker set jokershzt=#{joker.jokershzt}
         where id=#{jokidss}
     </update>
+
 </mapper>
