@@ -32,4 +32,17 @@ public class UsersController {
         }
         return loginFlag;
     }
+
+    /**
+     * 退出登录，清空登录用户的session,返回登录方法
+     * @param session
+     * @return
+     */
+    @RequestMapping("/loginout")
+    public String loginout(HttpSession session){
+        if(session!=null){
+            session.removeAttribute("loginUser");
+        }
+        return "login";
+    }
 }
