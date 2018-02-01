@@ -32,11 +32,13 @@
   <!--==================================================================================================-->
     <!--查询图片审核总条数-->
     <select id="queryTopicTotal" resultType="long">
-        select count(*) from xxw_topic where topicshzt=0
+        select count(*) from xxw_topic t,xxw_users u where t.userid=u.id and topicshzt=0
     </select>
     <!--查询图片审核每页信息-->
     <select id="queryShenTopicByPage" resultType="com.jk.pojo.Topic">
-        select * from xxw_topic where topicshzt=0 and id limit #{sta},#{row}
+        select t.id,t.topicnr,t.topiczancount,t.picurl,t.topictypeid,t.uptime,t.userid,t.topicshzt,u.id,u.fullname upusername,u.username,u.password,u.userlevel,u.userzt
+         from xxw_topic  t,xxw_users u
+         where t.userid=u.id and topicshzt=0 and t.id limit #{sta},#{row}
     </select>
     <!--//跳转审核话题页面并回显-->
     <select id="queryShTopiczt" resultType="com.jk.pojo.Topic">
@@ -46,6 +48,13 @@
     <update id="updateShTopiczt" parameterType="com.jk.pojo.Topic">
         update xxw_topic set topicshzt=#{topic.topicshzt}
         where id=#{topicidss}
+    </update>
+
+    <!--审核通过的图片话题为用户修改积分-->
+    <update id="updatetopjf" parameterType="com.jk.pojo.UserJifenInfo">
+        update xxw_user_jifen_info set
+        totalscore =totalscore+5
+        where articleid=#{id}
     </update>
     <!--==================================================================================================-->
     <!--查询图片审核总条数-->

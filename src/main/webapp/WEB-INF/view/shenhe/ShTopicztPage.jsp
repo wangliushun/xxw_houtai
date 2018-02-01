@@ -14,7 +14,7 @@
 
 
 <form id="shehheTopic-Info">
-    <input type="hidden" name="essayid" value="${topics.id}">
+    <input type="hidden" name="id" value="${topics.id}">
     <table>
         话题内容：<textarea name="topicnr">${topics.topicnr}</textarea>
         <hr>

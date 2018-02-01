@@ -22,7 +22,7 @@
             showColumns:true,//是否显示 内容列下拉框
             showPaginationSwitch:true,//是否显示 分页工具栏
             minimumCountColumns:1,//最小留下一个
-            height: $(window).height() - 200,
+            height: $(window).height() - 320,
             toolbar: '#toolbar',
             clickToSelect: true,
             showRefresh:true,//显示刷新按钮

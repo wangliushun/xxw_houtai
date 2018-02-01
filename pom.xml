@@ -91,6 +91,17 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+    <!-- spring boot tomcat jsp 支持开启 -->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+    </dependency>
+    <!--servlet支持开启-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+
   </dependencies>
 
   <build>

@@ -18,7 +18,7 @@
 <form id="uptop-form" method="post">
     <input type="hidden" name="id" value="${t.id}"/>
     <input type="hidden" name="uptime" value="${t.uptime}"/>
-    <input type="hidden" name="upusername" value="${t.upusername}"/>
+    <input type="hidden" name="userid" value="${t.userid}"/>
     <input type="hidden" name="topicshzt" value="${t.topicshzt}"/>
     <input type="hidden" name="topictypeid" value="${t.topictypeid}"/>
     <table>
@@ -72,7 +72,7 @@
     $(function(){
         $("#albumpictures").uploadify({
             //前台请求后台的url 不可忽略的参数
-            'uploader' :"/uploadPhotoFile",
+            'uploader' :"/top/uploadPhotoFile",
             //插件自带 不可忽略的参数
             'swf' : '<%=request.getContextPath()%>/uploadify/uploadify.swf',
             //撤销按钮的图片路径

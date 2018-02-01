@@ -32,7 +32,7 @@
 <script type="text/javascript">
     function fbtoppl(){
         $.ajax({
-            url:"/savetoppl",
+            url:"/top/savetoppl",
             type:"post",
             dataType:"text",
             data:$("#addtoppl-form").serialize(),
