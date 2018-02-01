@@ -15,7 +15,7 @@
 <form id="shenheJoker-Info">
 
         <input type="hidden" name="id" value="${jokerInfo.id}">
-    <input type="text" name="userid" value="${esslist.userid}">
+         <input type="hidden" name="userid" value="${esslist.userid}">
         <table>
             笑话标题：<input type="text" name="title" value="${jokerInfo.title}"><br>
             笑话发布时间：<input type="text" name="uptimes" value="${jokerInfo.uptimes}"><br>

@@ -16,7 +16,7 @@
     <tr>
         <td>文章详情:</td>
         <td><%--<input type="text" name="essaycontent" value="${esslist.essaycontent}">--%>
-            <textarea  name="essaycontent">value="${esslist.essaycontent}"</textarea>
+            <textarea  name="essaycontent">${esslist.essaycontent}</textarea>
         </td>
     </tr>
 </table>
