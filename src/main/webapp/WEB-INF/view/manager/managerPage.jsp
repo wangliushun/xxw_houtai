@@ -19,8 +19,8 @@
 
 ${loginUser.username}
 <c:if test="${loginUser.userlevel==1}">
-    <button  type="button" class="btn btn-default">指派临时管理员</button>
-    <button  type="button" class="btn btn-default">发布任务</button>
+    <button  type="button" class="btn btn-default" onclick="zhipai()">指派临时管理员</button>
+    <button  type="button" class="btn btn-default" onclick="cgtoaddfbrw()">发布任务</button>
 </c:if>
 <c:if test="${loginUser.userlevel==2}">
     <button  type="button" class="btn btn-default" onclick="toFaBu()">发布任务</button>
@@ -51,6 +51,40 @@ ${loginUser.username}
     </div>
 
 </c:if>
+
+<%--指派任务--%>
+
+<div id="zprw" style="display: none" align="center">
+    <form id="zhipai-form">
+
+        <table>
+            <tr>
+                <td>接受指派人</td>
+                <td>
+                    <select name="id">
+                        <option>请选择</option>
+                        <c:forEach items="${userslist}" var="u">
+                            <option value="${u.id}">${u.username}</option>
+                        </c:forEach>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" class="btn btn-default" onclick="tozp()">指派</button><%--
+                        <button type="button" class="btn btn-default">取消</button>--%>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+
+
+
+
+
+
     <%--发布任务--%>
 
     <div id="fbrw" style="display: none" align="center">
@@ -115,6 +149,7 @@ ${loginUser.username}
         $("#yl").attr("style","display:none");
         $("#yp").attr("style","display:none");
         $("#fbrw").attr("style","display:none");
+        $("#zprw").attr("style","display:none");
         $("#wz-table").bootstrapTable({
             url:"shenhe/queryShenEssayByPage.do",
             striped: true,//隔行变色
@@ -307,6 +342,7 @@ ${loginUser.username}
         $("#yl").attr("style","display:none");
         $("#yp").attr("style","display:none");
         $("#fbrw").attr("style","display:none");
+        $("#zprw").attr("style","display:none");
         $("#tp-table").bootstrapTable({
             url:"shenhe/queryShenTopicByPage.do",
             striped: true,//隔行变色
@@ -456,6 +492,7 @@ ${loginUser.username}
         $("#wz").attr("style","display:none");
         $("#tp").attr("style","display:none");
         $("#fbrw").attr("style","display:none");
+        $("#zprw").attr("style","display:none");
         $("#yl-table").bootstrapTable({
             url:"shenhe/queryShenJokerByPage.do",
             striped: true,//隔行变色
@@ -604,6 +641,7 @@ ${loginUser.username}
         $("#tp").attr("style","display:none");
         $("#yl").attr("style","display:none");
         $("#yp").attr("style","display:none");
+        $("#zprw").attr("style","display:none");
 
     }
     //发布任务   项数据任务表添加
@@ -619,16 +657,61 @@ ${loginUser.username}
             async:false,
             success:function (data){
                 if(data>0){
-                    alert("新增成功");
+                    alert("发布成功");
                     /*dialog.close();
                     $("#anchor-table").bootstrapTable('refresh');*/
                 }
             },
             error:function (){
-                alert("新增出错，请检查程序");
+                alert("发布出错，请检查程序");
             }
         })
 
+    }
+
+
+
+
+    //纸牌管理员
+    function zhipai(){
+        $("#zprw").attr("style","");
+        $("#wz").attr("style","display:none");
+        $("#tp").attr("style","display:none");
+        $("#yl").attr("style","display:none");
+        $("#yp").attr("style","display:none");
+        $("#fbrw").attr("style","display:none");
+    }
+
+    //确定指派
+    function tozp(){
+        $.ajax({
+            url:"fabu/updateFabuzt.do",
+
+            type:"post",
+
+            data:$("#zhipai-form").serialize(),
+
+            dataType:"text",
+            async:false,
+            success:function (data){
+                if(data>0){
+                    alert("指派成功");
+
+                }
+            },
+            error:function (){
+                alert("指派出错，请检查程序");
+            }
+        })
+    }
+    //朝观发布
+    function cgtoaddfbrw() {
+        $("#fbrw").attr("style","");
+        $("#wz").attr("style","display:none");
+        $("#tp").attr("style","display:none");
+        $("#yl").attr("style","display:none");
+        $("#yp").attr("style","display:none");
+        $("#zprw").attr("style","display:none");
     }
 
 </script>

@@ -13,4 +13,7 @@
         select * from  xxw_fabu where publishid
         limit #{star},#{rows}
     </select>
+    <update id="updateFabuzt" parameterType="com.jk.pojo.Users">
+        update xxw_users set   userlevel=2 where id=#{id}
+    </update>
 </mapper>

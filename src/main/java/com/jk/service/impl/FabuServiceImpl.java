@@ -31,4 +31,9 @@ public class FabuServiceImpl implements FabuService {
         json.put("rows", list);
         return json;
     }
+
+    @Override//修改指派人状态为管理员
+    public int updateFabuzt(Integer id) {
+        return fabusMapper.updateFabuzt(id);
+    }
 }
