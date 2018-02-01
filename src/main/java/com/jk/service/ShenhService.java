@@ -7,6 +7,8 @@ import com.jk.pojo.Joker;
 import com.jk.pojo.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.servlet.http.HttpSession;
+
 public interface ShenhService {
   
     //查询文章分页
@@ -20,7 +22,7 @@ public interface ShenhService {
     //跳转审核话题页面并回显
     Topic queryShTopiczt(Integer topicids);
     //话题审核
-    int updateShTopiczt(Integer topicids, Topic topic);
+    int updateShTopiczt(HttpSession session, Integer topicids, Topic topic);
     //分页查询音频信息
     JSONObject queryShenAudioByPage(int page, int rows, Audio audio);
     //跳转审核页面回显音频信息

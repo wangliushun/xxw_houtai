@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @EnableAutoConfiguration
@@ -71,8 +72,8 @@ public class ShenhController {
     //话题审核
     @RequestMapping("updateShTopiczt")
     @ResponseBody
-    public int updateShTopiczt(HttpServletRequest request,Topic topic,Integer topicids){
-        int a=shenhService.updateShTopiczt(topicids,topic);
+    public int updateShTopiczt(HttpServletRequest request, HttpSession session, Topic topic, Integer topicids){
+        int a=shenhService.updateShTopiczt(session,topicids,topic);
         return a;
     }
     //跳转到音频审核页面

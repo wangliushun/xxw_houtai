@@ -18,7 +18,7 @@
 <form id="uptop-form" method="post">
     <input type="hidden" name="id" value="${t.id}"/>
     <input type="hidden" name="uptime" value="${t.uptime}"/>
-    <input type="hidden" name="upusername" value="${t.upusername}"/>
+    <input type="hidden" name="userid" value="${t.userid}"/>
     <input type="hidden" name="topicshzt" value="${t.topicshzt}"/>
     <input type="hidden" name="topictypeid" value="${t.topictypeid}"/>
     <table>

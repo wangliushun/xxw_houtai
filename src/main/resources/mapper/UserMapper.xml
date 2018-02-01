@@ -38,7 +38,7 @@
 
     <!--新增话题 -->
     <insert id="saveTopic">
-        insert into xxw_topic values(#{id},#{topicnr},#{topiczancount},#{picurl},#{topictypeid},#{uptime},#{upusername},#{topicshzt})
+        insert into xxw_topic values(#{id},#{topicnr},#{topiczancount},#{picurl},#{topictypeid},#{uptime},#{userid},#{topicshzt})
     </insert>
 
     <!-- 回显话题-->
@@ -49,7 +49,7 @@
     <!-- 修改话题-->
     <update id="updateTopic">
         update xxw_topic set id=#{id},topicnr=#{topicnr},topiczancount=#{topiczancount},picurl=#{picurl},
-        topictypeid=#{topictypeid},uptime=#{uptime},upusername=#{upusername},topicshzt=#{topicshzt}
+        topictypeid=#{topictypeid},uptime=#{uptime},userid=#{userid},topicshzt=#{topicshzt}
         where id=#{id}
     </update>
 
@@ -103,20 +103,23 @@
 
     <!--新增话题评论-->
     <insert id="savetoppl">
-        insert into xxw_topiccomment values(#{id},#{topicid},#{topcontent},#{topusername},#{toppltime},#{topplstate})
+        insert into xxw_topiccomment values(#{id},#{topicid},#{topcontent},#{topuserid},#{toppltime},#{topplstate})
     </insert>
 
 
     <!-- 分页查询话题评论总条数 -->
     <select id="queryTotaltopPl" resultType="long">
-        select count(*) from xxw_topiccomment  where topicid=#{topicid}
+        select count(*) from xxw_topiccomment tc,xxw_users u  where
+        tc.topuserid=u.id and topicid=#{topicid}
     </select>
 
 
     <!-- 分页查询话题评论 -->
     <select id="querytopPlpage" resultType="com.jk.pojo.TopicComment">
-        select * from xxw_topiccomment  where topicid=#{t.topicid}
-        and  id limit #{st},#{row}
+        select tc.id,u.fullname topusername,u.username,u.password,u.userlevel,u.userzt,
+         u.id,tc.topicid,tc.topcontent,tc.topuserid,tc.toppltime,tc.topplstate
+         from xxw_topiccomment tc,xxw_users u  where
+        tc.topuserid=u.id and topicid=#{t.topicid} and  tc.id limit #{st},#{row}
     </select>
 
 

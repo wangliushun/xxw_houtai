@@ -88,6 +88,11 @@
                     width: 100
 
                 },{
+                    field: 'userid',
+                    title: '上传人id',
+                    width: 100
+
+                },{
                     field: 'topicshzt',
                     title: '审核状态',
                     width: 100,

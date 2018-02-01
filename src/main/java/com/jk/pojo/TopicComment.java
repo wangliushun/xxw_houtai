@@ -6,16 +6,26 @@ public class TopicComment {
     private Integer id;//话题评论id(主键)
     private Integer topicid;//话题id
     private String topcontent;//话题评论内容
-    private String topusername;//话题评论人名称
+    private Integer topuserid;//话题评论人名称
     private String toppltime;//话题评论时间
     private Integer topplstate;//话题评论状态(1匿名,2正常)
-
+    //业务字段
+    private String topusername;//话题评论人名称
     public Integer getId() {
         return id;
     }
 
+
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getTopuserid() {
+        return topuserid;
+    }
+
+    public void setTopuserid(Integer topuserid) {
+        this.topuserid = topuserid;
     }
 
     public Integer getTopicid() {
