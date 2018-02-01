@@ -22,6 +22,7 @@ import java.util.List;
 //话题控制层
 @Controller
 @EnableAutoConfiguration
+@RequestMapping("top")
 public class UserController {
     @Autowired
     private UserService userService;

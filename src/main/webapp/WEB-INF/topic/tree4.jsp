@@ -49,7 +49,7 @@
     function picchushi(){
         $("#albumpictures").uploadify({
             //前台请求后台的url 不可忽略的参数
-            'uploader' :"/uploadPhotoFile",
+            'uploader' :"/top/uploadPhotoFile",
             //插件自带 不可忽略的参数
             'swf' : '<%=request.getContextPath()%>/uploadify/uploadify.swf',
             //撤销按钮的图片路径

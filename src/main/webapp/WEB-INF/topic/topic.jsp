@@ -44,12 +44,12 @@
         var mms=$("#a").val();
         BootstrapDialog.show({
             title: '添加话题',
-            message: $('<div></div>').load('/test4'),
+            message: $('<div></div>').load('/top/test4'),
             buttons: [{
                 label: '保存',
                 action: function(dialog) {
                     $.ajax({
-                        url:"/saveTopic?topictypeid="+mms,
+                        url:"/top/saveTopic?topictypeid="+mms,
                         type:"post",
                         data:$("#addtop-form").serialize(),
                         success:function (data){
@@ -74,7 +74,7 @@
     //重新设置封面
     function xiugaipiczu(xfm,tid){
         $.ajax({
-            url:"/updatePicZufm",
+            url:"/top/updatePicZufm",
             type:"post",
             data:{"fmimgurl":xfm,"picgroupmenuid":tid},
             success:function (data){
@@ -90,7 +90,7 @@
     function aa(cid,tid){
         BootstrapDialog.show({
             title: '修改话题',
-            message: $('<div></div>').load('/uptopic?id='+cid+"&mid="+tid),
+            message: $('<div></div>').load('/top/uptopic?id='+cid+"&mid="+tid),
             buttons: [{
                 label: '修改',
                 action: function(dialog) {
@@ -98,7 +98,7 @@
                     //alert(xfm);
                     if($("#flag").val()=="是封面"){
                         $.ajax({
-                            url:"/updateTopic",
+                            url:"/top/updateTopic",
                             type:"post",
                             data:$("#uptop-form").serialize(),
                             dataType:"text",
@@ -122,7 +122,7 @@
                         })
                     }else{
                         $.ajax({
-                            url:"/updateTopic",
+                            url:"/top/updateTopic",
                             type:"post",
                             data:$("#uptop-form").serialize(),
                             dataType:"text",
@@ -211,7 +211,7 @@
     //页面分页展示话题
     function ser(){
         $("#stu-table").bootstrapTable({
-            url:"<%=request.getContextPath()%>/queryTopicByMenuId",
+            url:"<%=request.getContextPath()%>/top/queryTopicByMenuId",
             striped: true,//隔行变色
             showColumns:true,//是否显示 内容列下拉框
             showPaginationSwitch:true,//是否显示 分页工具栏
@@ -298,7 +298,7 @@
     function querytoppl(cid){
         BootstrapDialog.show({
             title: '评论列表',
-            message: $('<div></div>').load('/toquerytoppl?topid='+cid),
+            message: $('<div></div>').load('/top/toquerytoppl?topid='+cid),
             buttons: [{
                 label: '取消',
                 action: function(dialog) {
@@ -312,7 +312,7 @@
     function topaddpl(cid,tid){
         BootstrapDialog.show({
             title: '详细信息',
-            message: $('<div></div>').load('/totopxiangxi?id='+cid),
+            message: $('<div></div>').load('/top/totopxiangxi?id='+cid),
             buttons: [{
                 label: '取消',
                 action: function(dialog) {
@@ -334,7 +334,7 @@
     //点赞
     function dianzan(cid,tid){
         $.ajax({
-            url:"/updatezanById?id="+cid,
+            url:"/top/updatezanById?id="+cid,
             type:"post",
             success:function (data){
                 if( $("#a").val()==0){
@@ -354,7 +354,7 @@
     //不是封面，可以删除
     function deletetopics(cid,tid){
         if(confirm("确认删除吗?")){
-        $.post("<%=basePath%>/deletetopic",{'id':cid},function(data){
+        $.post("<%=basePath%>/top/deletetopic",{'id':cid},function(data){
             if(data > 0){
                 alert("删除成功");
                 if( $("#a").val()==0){
@@ -369,7 +369,7 @@
     //删除前先查询是否是该类型封面
     function querytgbyid(cid,tid,ur){
         $.ajax({
-            url:"/querytgById?picgroupmenuid="+tid,
+            url:"/top/querytgById?picgroupmenuid="+tid,
             type:"post",
             success:function (data){
                 if(data[0].fmimgurl==ur){

@@ -20,7 +20,7 @@
 <script type="text/javascript">
     function deletetoppl(cid){
         if(confirm("确认删除吗?")){
-            $.post("<%=basePath%>/deletetopplbyId",{'id':cid},function(data){
+            $.post("<%=basePath%>/top/deletetopplbyId",{'id':cid},function(data){
                 if(data > 0){
                     alert("删除成功");
                     sxtoppl();
@@ -43,7 +43,7 @@
     function toppl(){
         var tsid=${topsid}
             $("#toppl-table").bootstrapTable({
-                url:"<%=request.getContextPath()%>/queryTopPlByTopId?topicid="+tsid,
+                url:"<%=request.getContextPath()%>/top/queryTopPlByTopId?topicid="+tsid,
                 striped: true,//隔行变色
                 showColumns:true,//是否显示 内容列下拉框
                 showPaginationSwitch:true,//是否显示 分页工具栏
