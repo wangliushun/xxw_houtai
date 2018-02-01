@@ -13,4 +13,6 @@ public interface FabusMapper {
     long queryFabuTotal(Fabus fb);
     //查询
     List<Fabus> queryFabuByPage(@Param("star") int start, @Param("rows") int rows, @Param("fb") Fabus fb);
+
+    int updateFabuzt(Integer id);
 }

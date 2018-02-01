@@ -46,4 +46,6 @@ public interface ShenhMapper {
     Essay showwzxq(Integer essayid);
     //修改文章积分
     int updatejf(Integer userid);
+    //修改话题图片积分
+    int updatetopjf(Integer id);
 }

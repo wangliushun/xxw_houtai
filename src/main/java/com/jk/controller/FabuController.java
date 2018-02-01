@@ -1,9 +1,7 @@
 package com.jk.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.jk.pojo.Anchor;
-import com.jk.pojo.Fabus;
-import com.jk.pojo.ZmenuPoJo;
+import com.jk.pojo.*;
 import com.jk.service.FabuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -39,6 +37,13 @@ public class FabuController {
     public Object queryFabuByPage(int page,int rows,Fabus fb){
         JSONObject json=fabuService.queryFabuByPage(page,rows,fb);
         return json;
+    }
+    //updateFabuzt修改指派人的状态
+    @RequestMapping("updateFabuzt")
+    @ResponseBody
+    public int updateFabuzt(HttpServletRequest request,Users user){
+        int a=fabuService.updateFabuzt(user.getId());
+        return a;
     }
 
 }

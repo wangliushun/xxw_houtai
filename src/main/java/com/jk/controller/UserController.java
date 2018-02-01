@@ -22,6 +22,7 @@ import java.util.List;
 //话题控制层
 @Controller
 @EnableAutoConfiguration
+@RequestMapping("top")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -130,7 +131,7 @@ public class UserController {
     @ResponseBody
     public Object saveTopic(HttpSession session,Topic topic){
         Users  user= (Users) session.getAttribute("loginUser");
-        topic.setUpusername(user.getUsername());
+        topic.setUserid(user.getId());
         SimpleDateFormat sim=new SimpleDateFormat("yyyy-MM-dd");
         Date date=new Date();
         topic.setUptime(sim.format(date));
@@ -145,7 +146,7 @@ public class UserController {
     @ResponseBody
     public Object updateTopic(HttpSession session,Topic topic){
         Users  user= (Users) session.getAttribute("loginUser");
-        topic.setUpusername(user.getUsername());
+        topic.setUserid(user.getId());
         SimpleDateFormat sim=new SimpleDateFormat("yyyy-MM-dd");
         Date date=new Date();
         topic.setUptime(sim.format(date));
@@ -200,7 +201,7 @@ public class UserController {
             tc.setTopplstate(2);
         }
         Users  user= (Users) session.getAttribute("loginUser");
-        tc.setTopusername(user.getUsername());
+        tc.setTopuserid(user.getId());
         SimpleDateFormat sim=new SimpleDateFormat("yyyy-MM-dd");
         Date date=new Date();
         tc.setToppltime(sim.format(date));

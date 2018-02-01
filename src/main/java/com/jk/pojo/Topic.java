@@ -7,9 +7,11 @@ public class Topic {
     private String picurl;//图片
     private Integer topictypeid;//菜单id(关联菜单表zmenu中id)
     private String uptime;//上传时间
-    private String upusername;//上传人(关联管理员)
+    private Integer userid;//上传人id(关联管理员)
     private Integer topicshzt;//审核状态
 
+    //业务字段
+    private String upusername;//上传人(关联管理员)
 
     public Integer getId() {
         return id;
@@ -17,6 +19,14 @@ public class Topic {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getUserid() {
+        return userid;
+    }
+
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
     public String getTopicnr() {

@@ -22,7 +22,7 @@
 
         $(function(){
             $("#pg-table").bootstrapTable({
-                url:"<%=request.getContextPath()%>/queryPicGroup",
+                url:"<%=request.getContextPath()%>/top/queryPicGroup",
                 striped: true,//隔行变色
                 showColumns:true,//是否显示 内容列下拉框
                 showPaginationSwitch:true,//是否显示 分页工具栏
@@ -82,12 +82,12 @@
         function setfm(menuids,fmurl){
             BootstrapDialog.show({
                 title: '设置封面',
-                message: $('<div></div>').load('/setfm?ur='+fmurl+"&topictypeid="+menuids),
+                message: $('<div></div>').load('/top/setfm?ur='+fmurl+"&topictypeid="+menuids),
                 buttons: [{
                     label: '确定',
                     action: function(dialog) {
                         $.ajax({
-                            url:"/updatePicGroupfm?picgroupmenuid="+menuids,
+                            url:"/top/updatePicGroupfm?picgroupmenuid="+menuids,
                             type:"post",
                             data:$("#setfm-form").serialize(),
                             success:function (data){

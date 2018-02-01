@@ -7,6 +7,7 @@ import com.jk.service.ShenhService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Service
@@ -35,7 +36,7 @@ public class ShenhServiceImpl implements ShenhService {
     @Override//审核文章
     public int updateShEssayzt(Essay ess) {
         int zt=shenhMapper.updateShEssayzt(ess);
-        if(zt==1){
+        if(zt==1&&ess.getEssayzt()==1){
             zt=shenhMapper.updatejf(ess.getUserid());
         }
         return zt;
@@ -59,8 +60,13 @@ public class ShenhServiceImpl implements ShenhService {
     }
 
     @Override//话题审核
-    public int updateShTopiczt(Integer topicids, Topic topic) {
-        return shenhMapper.updateShTopiczt(topicids,topic);
+    public int updateShTopiczt(HttpSession session, Integer topicids, Topic topic) {
+        int zt=shenhMapper.updateShTopiczt(topicids,topic);
+        if(zt==1&&topic.getTopicshzt()==1){
+            Users  user= (Users) session.getAttribute("loginUser");
+            zt=shenhMapper.updatetopjf(user.getId());
+        }
+        return zt;
     }
 
     @Override //分页查询音频信息

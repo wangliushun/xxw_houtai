@@ -78,4 +78,5 @@ public class Users {
     public void setUserzt(Integer userzt) {
         this.userzt = userzt;
     }
+
 }
