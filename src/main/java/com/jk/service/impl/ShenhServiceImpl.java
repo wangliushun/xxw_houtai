@@ -35,7 +35,7 @@ public class ShenhServiceImpl implements ShenhService {
     @Override//审核文章
     public int updateShEssayzt(Essay ess) {
         int zt=shenhMapper.updateShEssayzt(ess);
-        if(zt==1){
+        if(zt==1&&ess.getEssayzt()==1){
             zt=shenhMapper.updatejf(ess.getUserid());
         }
         return zt;
