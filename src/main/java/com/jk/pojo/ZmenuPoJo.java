@@ -1,6 +1,9 @@
 package com.jk.pojo;
 
-public class ZmenuPoJo {
+import java.io.Serializable;
+
+public class ZmenuPoJo implements Serializable{
+    private static final long serialVersionUID = 1518347860512209759L;
     private Integer id;
 
     private Integer pid;

@@ -1,6 +1,8 @@
 package com.jk.pojo;
 
-public class Anchor {
+import java.io.Serializable;
+
+public class Anchor implements Serializable{
     private Integer id;
 
     private String name;//名称
