@@ -30,13 +30,13 @@
 
       <!-- 新增按钮 -->
     <div style="display: none" id="anniu">
-        <input type="button"  value="新增" onclick="addDialog()" >
+        <input type="button" class="btn btn-primary" value="新增" onclick="addDialog()" >
     </div>
     <!-- 点赞回到当前页，hidden当前页 -->
     <%--<input type="text" id="pa" value="${pa}"/>--%>
 
 <!-- 列表展示 -->
-<table class="table" id="stu-table" border="1"></table>
+<table class="table" id="stu-table" ></table>
 <script type="text/javascript">
 
     //新增话题
@@ -263,7 +263,7 @@
                     title: '点赞数',
                     width: 100,
                     formatter:function (val,rowdata,rowIndex){
-                        return "<input type='button' value='"+rowdata.topiczancount+"'  onClick='dianzan(\""+rowdata.id+"\",\""+rowdata.topictypeid+"\")'/>";
+                        return "<input type='button' class='btn btn-primary' value='"+rowdata.topiczancount+"'  onClick='dianzan(\""+rowdata.id+"\",\""+rowdata.topictypeid+"\")'/>";
                     }
 
                 },{
@@ -271,7 +271,7 @@
                     title: '操作',
                     width: 100,
                     formatter:function (val,rowdata,rowIndex){
-                        return "<input type='button' value='评论列表'  onClick='querytoppl(\""+rowdata.id+"\")'/>";
+                        return "<input type='button' class='btn btn-primary' value='评论列表'  onClick='querytoppl(\""+rowdata.id+"\")'/>";
                     }
 
                 },{
@@ -279,7 +279,7 @@
                     title: '操作',
                     width: 100,
                     formatter:function (val,rowdata,rowIndex){
-                        return "<input type='button' value='修改'  onClick='aa(\""+rowdata.id+"\",\""+rowdata.topictypeid+"\")'/>";
+                        return "<input type='button' class='btn btn-primary' value='修改'  onClick='aa(\""+rowdata.id+"\",\""+rowdata.topictypeid+"\")'/>";
                     }
 
                 },{
@@ -287,7 +287,7 @@
                     title: '操作',
                     width: 100,
                     formatter:function (val,rowdata,rowIndex){
-                        return "<input type='button' value='删除'  onClick='querytgbyid(\""+rowdata.id+"\",\""+rowdata.topictypeid+"\",\""+rowdata.picurl+"\")'/>";
+                        return "<input type='button' class='btn btn-primary' value='删除'  onClick='querytgbyid(\""+rowdata.id+"\",\""+rowdata.topictypeid+"\",\""+rowdata.picurl+"\")'/>";
                     }
 
                 }

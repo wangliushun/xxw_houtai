@@ -17,10 +17,10 @@
 
 内容:${tops.topicnr}<br/>
 上传时间:${tops.uptime}<br/>
-赞:<input type="button" value="${tops.topiczancount}"/><br/><br/>
+赞:<input type="button" class='btn btn-primary' value="${tops.topiczancount}"/><br/><br/>
 
 <form id="addtoppl-form">
-    匿名<input type="checkbox" name="topplstate" value="1"/>
+    匿名<input type="checkbox"  name="topplstate" value="1"/>
     <input type="hidden" name="topicid" value="${tops.id}"/><br/>
     评论内容:<textarea rows="3" cols="50" name="topcontent" id="tpnr"></textarea>
 </form><br/>
@@ -28,7 +28,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="button" value="发表" onclick="fbtoppl()"/>
+<input type="button" class='btn btn-primary' value="发表" onclick="fbtoppl()"/>
 <script type="text/javascript">
     function fbtoppl(){
         $.ajax({

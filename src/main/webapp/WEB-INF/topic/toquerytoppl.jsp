@@ -16,7 +16,7 @@
 <body>
 
 <!-- 列表展示 -->
-<table class="table" id="toppl-table" border="1"></table>
+<table class="table" id="toppl-table" ></table>
 <script type="text/javascript">
     function deletetoppl(cid){
         if(confirm("确认删除吗?")){
@@ -98,7 +98,7 @@
                         title: '操作',
                         width: 100,
                         formatter:function (val,rowdata,rowIndex){
-                            return "<input type='button' value='删除'  onClick='deletetoppl(\""+rowdata.id+"\")'/>";
+                            return "<input type='button' class='btn btn-primary' value='删除'  onClick='deletetoppl(\""+rowdata.id+"\")'/>";
                         }
                     }
                 ]

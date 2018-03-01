@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- 列表展示 -->
-    <table class="table" id="pg-table" border="1"></table>
+    <table class="table" id="pg-table" ></table>
     <script type="text/javascript">
         function sxfm(){
             $("#pg-table").bootstrapTable("refresh",{'pageNumber':1});
@@ -72,7 +72,7 @@
                         title: '操作',
                         width: 100,
                         formatter:function (val,rowdata,rowIndex){
-                            return "<input type='button' value='设置封面图片'  onClick='setfm(\""+rowdata.picgroupmenuid+"\",\""+rowdata.fmimgurl+"\")'/>";
+                            return "<input type='button' class='btn btn-primary' value='设置封面图片'  onClick='setfm(\""+rowdata.picgroupmenuid+"\",\""+rowdata.fmimgurl+"\")'/>";
                         }
                     }
                 ]

@@ -19,7 +19,12 @@ public class UsersServiceImpl implements UsersService{
         List<Users> list=usersMapper.tologin(users);
         if (list.size()>0){
             session.setAttribute("loginUser",list.get(0));
-            return "loginYes";
+            List<Users> list2=usersMapper.loginState(users);
+            if(list2.size()>0){
+                    return "Common";
+            }else{
+                return "Administrator";
+            }
         }else{
            return "loginNo";
         }

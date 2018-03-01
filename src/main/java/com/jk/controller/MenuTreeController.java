@@ -31,7 +31,7 @@ public class MenuTreeController {
      */
     @RequestMapping("/login")
     public String login(){
-        return "../../index";
+        return "../../index3";
     }
 
     /**
@@ -82,4 +82,123 @@ public class MenuTreeController {
         mongoTemplate.insert(tm);
         return null;
     }*/
+    /**
+     * 跳转前台主页面
+     * @return
+     */
+    @RequestMapping("/to")
+    public String to(){
+        return "qt/show";
+    }
+
+    /**
+     * 跳转show页面
+     * @return
+     */
+    @RequestMapping("show")
+    public String show(){
+        return "qt/show";
+    }
+    /**
+     * 跳转征文比赛页面
+     * @return
+     */
+    @RequestMapping("zhengwen")
+    public String zhengwen(){
+        return "qt/zhengwen";
+    }
+    /**
+     * 跳转倾听世界页面
+     * @return
+     */
+    @RequestMapping("qingting")
+    public String qingting(){
+        return "qt/qingting";
+    }
+
+    /**
+     * 跳转叫醒耳朵页面
+     * @return
+     */
+    @RequestMapping("jiaoxing")
+    public String jiaoxing(){
+        return "qt/jiaoxing";
+    }
+    /**
+     * 跳转每日一笑页面
+     * @return
+     */
+    @RequestMapping("meiri")
+    public String meiri(){
+        return "qt/meiri";
+    }
+    /**
+     * 跳转报错页面
+     * @return
+     */
+    @RequestMapping("404")
+    public String baocuo(){
+        return "qt/404";
+    }
+    /**
+     * 跳转ear_detail页面
+     * @return
+     */
+    @RequestMapping("ear_detail")
+    public String ear_detail(){
+        return "qt/ear_detail";
+    }
+
+    /**
+     * 跳转news_add页面
+     * @return
+     */
+    @RequestMapping("news_add")
+    public String news_add(){
+        return "qt/news_add";
+    }
+    /**
+     * 跳转news_add_success页面
+     * @return
+     */
+    @RequestMapping("news_add_success")
+    public String news_add_success(){
+        return "qt/news_add_success";
+    }
+
+    /**
+     * 跳转news_detail页面
+     * @return
+     */
+    @RequestMapping("news_detail")
+    public String news_detail(){
+        return "qt/news_detail";
+    }
+
+    /**
+     * 跳转pic_detail页面
+     * @return
+     */
+    @RequestMapping("pic_detail")
+    public String pic_detail(){
+        return "qt/pic_detail";
+    }
+
+    /**
+     * 跳转reg页面
+     * @return
+     */
+    @RequestMapping("reg")
+    public String reg(){
+        return "qt/reg";
+    }
+
+    /**
+     * 跳转suggest页面
+     * @return
+     */
+    @RequestMapping("suggest")
+    public String suggest(){
+        return "qt/suggest";
+    }
 }

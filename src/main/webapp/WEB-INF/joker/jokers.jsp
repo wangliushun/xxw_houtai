@@ -1,13 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
-    application.setAttribute("basePath", basePath);
-%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ include file="/style/bootstrap.jsp" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,10 +24,10 @@
 
         <!-- 新增按钮 -->
         <div style="display: none" id="jkanniu">
-            <input type="button"  value="新增" onclick="addjokDialog()" >
+            <input type="button" class='btn btn-primary'  value="新增" onclick="addjokDialog()" >
         </div>
         <!-- 列表展示 -->
-        <table class="table" id="jok-table" border="1"></table>
+        <table  id="jok-table" ></table>
         <script type="text/javascript">
 
             //新增娱乐话题
@@ -162,7 +156,7 @@
                     minimumCountColumns:1,//最小留下一个
                     showRefresh:true,//显示刷新按钮
                     showToggle:true,//显示切换视图
-                    search:true,//是否显示搜索框
+                    //search:true,//是否显示搜索框
                     searchOnEnterKey:true,//设置为 true时，按回车触发搜索方法，否则自动触发搜索方法
                     pagination:true,//开启分页
                     paginationLoop:true,//开启分页无限循环
@@ -194,7 +188,7 @@
                         },{
                             field: 'content',
                             title: '内容',
-                            width: 100,
+                            width: 50,
                             formatter:function (val,rowdata,rowIndex){
                                 var b=val.length;
                                 var a=val.substring(0,15);
@@ -207,41 +201,41 @@
                         },{
                             field: 'cai',
                             title: '踩',
-                            width: 100,
+                            width: 50,
                             formatter:function (val,rowdata,rowIndex){
-                                return "<input type='button' value='"+rowdata.cai+"'  onClick='caizan(\""+rowdata.id+"\",\""+rowdata.typesid+"\",1)'/>";
+                                return "<input type='button' class='btn btn-primary' value='"+rowdata.cai+"'  onClick='caizan(\""+rowdata.id+"\",\""+rowdata.typesid+"\",1)'/>";
                             }
 
                         },{
                             field: 'zan',
                             title: '赞',
-                            width: 100,
+                            width: 50,
                             formatter:function (val,rowdata,rowIndex){
-                                return "<input type='button' value='"+rowdata.zan+"'  onClick='caizan(\""+rowdata.id+"\",\""+rowdata.typesid+"\",2)'/>";
+                                return "<input type='button' class='btn btn-primary' value='"+rowdata.zan+"'  onClick='caizan(\""+rowdata.id+"\",\""+rowdata.typesid+"\",2)'/>";
                             }
 
                         },{
                             field: 'p',
                             title: '操作',
-                            width: 100,
+                            width: 50,
                             formatter:function (val,rowdata,rowIndex){
-                                return "<input type='button' value='评论列表'  onClick='querypl(\""+rowdata.id+"\")'/>";
+                                return "<input type='button' class='btn btn-primary' value='评论列表'  onClick='querypl(\""+rowdata.id+"\")'/>";
                             }
 
                         },{
                             field: 'v',
                             title: '操作',
-                            width: 100,
+                            width: 50,
                             formatter:function (val,rowdata,rowIndex){
-                                return "<input type='button' value='修改'  onClick='updatej(\""+rowdata.id+"\",\""+rowdata.typesid+"\")'/>";
+                                return "<input type='button' class='btn btn-primary' value='修改'  onClick='updatej(\""+rowdata.id+"\",\""+rowdata.typesid+"\")'/>";
                             }
 
                         },{
                             field: 'n',
                             title: '操作',
-                            width: 100,
+                            width: 50,
                             formatter:function (val,rowdata,rowIndex){
-                                return "<input type='button' value='删除'  onClick='deletej(\""+rowdata.id+"\",\""+rowdata.typesid+"\")'/>";
+                                return "<input type='button' class='btn btn-primary' value='删除'  onClick='deletej(\""+rowdata.id+"\",\""+rowdata.typesid+"\")'/>";
                             }
 
                         }

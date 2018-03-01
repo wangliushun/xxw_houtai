@@ -16,8 +16,8 @@
         标题:${joks.title}<br/>
         ${joks.publisher}&nbsp;&nbsp;发表于&nbsp;&nbsp;${joks.uptimes}<br/>
         内容:${joks.content}<br/>
-        踩:<input type="button" value="${joks.cai}"/>&nbsp;&nbsp;&nbsp;
-        赞:<input type="button" value="${joks.zan}"/><br/><br/>
+        踩:<input type="button" class='btn btn-primary' value="${joks.cai}"/>&nbsp;&nbsp;&nbsp;
+        赞:<input type="button" class='btn btn-primary' value="${joks.zan}"/><br/><br/>
 
     <form id="addpl-form">
         匿名<input type="checkbox" name="plstate" value="1"/>
@@ -28,7 +28,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="button" value="发表" onclick="fbpl()"/>
+        <input type="button" class='btn btn-primary' value="发表" onclick="fbpl()"/>
         <script type="text/javascript">
             function fbpl(){
                 $.ajax({

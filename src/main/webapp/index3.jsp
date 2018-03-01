@@ -21,6 +21,7 @@
 <body>
 <h1>后台管理系统</h1>
 <div class="login-form">
+    <%--<p><a href="javascript:qt()">前台</a></p>--%>
     <h2>用户登录</h2>
     <div class="form-info">
         <form id="loginform">
@@ -48,8 +49,10 @@
                 success:function (data) {
                     if(data=="loginNo"){
                         $("#msg").html("<font color='red'>用户名或密码错误</font>")
-                    }else if(data=="loginYes"){
+                    }else if(data=="Administrator"){
                         location.href="/home"
+                    }else if(data=="Common"){
+                        location.href="/to"
                     }
             }
             })
