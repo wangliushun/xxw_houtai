@@ -22,10 +22,9 @@ public class EssayServiceImpl implements EssayService {
         //当前页数据————————oracle分页   关键字 rownum    两个参数：起始位置、结束位置
         //起始位置 =（当前页-1）*每页条数
         int start = (page-1)*rows;
-        //结束位置 = 起始位置+每页条数
-        int end = start + rows;
+
         //查询当前页数据
-        List<EssayTitle> s = essayMapper.queryspage(start,end,essaytitle);
+        List<EssayTitle> s = essayMapper.queryspage(start,rows,essaytitle);
         JSONObject json = new JSONObject();
         json.put("total", totalCount);
         json.put("rows", s);
@@ -60,10 +59,8 @@ public class EssayServiceImpl implements EssayService {
         //当前页数据————————oracle分页   关键字 rownum    两个参数：起始位置、结束位置
         //起始位置 =（当前页-1）*每页条数
         int start = (page-1)*rows;
-        //结束位置 = 起始位置+每页条数
-        int end = start + rows;
         //查询当前页数据
-        List<EssayTitle> s = essayMapper.queryEssaypage(start,end,essay);
+        List<EssayTitle> s = essayMapper.queryEssaypage(start,rows,essay);
         JSONObject json = new JSONObject();
         json.put("total", totalCount);
         json.put("rows", s);
@@ -88,10 +85,8 @@ public class EssayServiceImpl implements EssayService {
         //当前页数据————————oracle分页   关键字 rownum    两个参数：起始位置、结束位置
         //起始位置 =（当前页-1）*每页条数
         int start = (page-1)*rows;
-        //结束位置 = 起始位置+每页条数
-        int end = start + rows;
         //查询当前页数据
-        List<EssayTitle> s = essayMapper.queryEssayCommentpage(start,end,essayComment,essayides);
+        List<EssayTitle> s = essayMapper.queryEssayCommentpage(start,rows,essayComment,essayides);
         JSONObject json = new JSONObject();
         json.put("total", totalCount);
         json.put("rows", s);

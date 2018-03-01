@@ -71,7 +71,7 @@
                        if (nowdate.getTime()>endtime.getTime()){
                             return "投稿已截止";
                         }
-                       return "<input type='button' value='投稿' onclick='toupword("+row.id+",\""+row.essaytitlename+"\")'/>";
+                       return "<input type='button' class=‘btn btn-primary’ value='投稿' onclick='toupword("+row.id+",\""+row.essaytitlename+"\")'/>";
                     }
 
                 }]

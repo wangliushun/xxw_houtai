@@ -20,7 +20,7 @@
         <tr>
             <td >征文标题</td>
             <td >
-                <input type="text" name="essaytitlename">
+                <input type="text"  name="essaytitlename">
             </td>
         </tr>
         <tr>
