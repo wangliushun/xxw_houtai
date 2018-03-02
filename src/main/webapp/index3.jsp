@@ -52,7 +52,7 @@
                     }else if(data=="Administrator"){
                         location.href="/home"
                     }else if(data=="Common"){
-                        location.href="/to"
+                        location.href="/show"
                     }
             }
             })

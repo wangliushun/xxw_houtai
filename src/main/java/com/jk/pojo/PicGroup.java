@@ -5,6 +5,16 @@ public class PicGroup {
     private String typename;//类型名称
     private String fmimgurl;//封面路径
     private Integer  picgroupmenuid;//图片组表菜单id
+    //业务字段
+    private Integer  zanzong;//赞总数
+
+    public Integer getZanzong() {
+        return zanzong;
+    }
+
+    public void setZanzong(Integer zanzong) {
+        this.zanzong = zanzong;
+    }
 
     public Integer getId() {
         return id;

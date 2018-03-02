@@ -15,4 +15,19 @@
     select * from xxw_sys_tree where pid=#{pid}
   </select>
 
+
+  <select id="syqtsj" resultType="com.jk.pojo.PicGroup">
+    SELECT p.id,typename,fmimgurl,picgroupmenuid,topiczancount zanzong
+      FROM xxw_topic t,xxw_zmenu z,xxw_picgroup p WHERE t.topictypeid=z.id  and
+     z.text=p.typename and z.id=p.picgroupmenuid GROUP BY p.picgroupmenuid
+     ORDER BY p.picgroupmenuid
+  </select>
+
+  <select id="syqtsjbt" resultType="com.jk.pojo.ZmenuPoJo">
+    select * from xxw_zmenu where pid=3
+  </select>
+
+  <select id="qtqbtp" resultType="com.jk.pojo.Topic">
+    select * from xxw_topic where topicshzt=1
+  </select>
 </mapper>

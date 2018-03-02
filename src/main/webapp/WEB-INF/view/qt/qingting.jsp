@@ -167,340 +167,14 @@
                 <div id="listhead"></div>
                 <div id="QingNavBut">
                     <a href="/qingting" class="init">倾听世界</a>
-                    <ul>
-                        <li><a href="pic_detail.html?24" qid="24">清新</a></li>
-                        <li><a href="pic_detail.html?25" qid="25">时尚</a></li>
-                        <li><a href="pic_detail.html?6" qid="6">性感</a></li>
-                        <li><a href="pic_detail.html?1" qid="1">美女</a></li>
-                        <li><a href="pic_detail.html?7" qid="7">感性</a></li>
-                        <li><a href="pic_detail.html?3" qid="3">旅行</a></li>
-                        <li><a href="pic_detail.html?13" qid="13">漫画</a></li>
-                        <li><a href="pic_detail.html?15" qid="15">超萌</a></li>
-                        <li><a href="pic_detail.html?10" qid="10">艺术</a></li>
-                        <li><a href="pic_detail.html?14" qid="14">资讯</a></li>
-                        <li><a href="pic_detail.html?22" qid="22">回忆</a></li>
-                        <li><a href="pic_detail.html?4" qid="4">搞笑</a></li>
+                    <ul id="qtbt">
                     </ul>
                 </div>
             </div>
             <div id="qingMW" style="width:1020px;">
                 <div class="col" id="pic-list" style="height: 3048px;">
-                    <div style="left:0px;top:0px;" class="single" id="a-qing-wp-5640">
-                        <div onmouseover="Sys.showQingLove(5640,$(this));" style="width:310:px;height:465px" class="thumb-wrap" on="0">
-                            <a target="_blank" href="pic_detail.html?25-5640" class="thumb" title="点击查看详细">
-                                <img width="310" height="465" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_89670df225_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_89670df225_310.jpg" id="qing_image_5640" style="display: inline;">
-                            </a>
-                            <div class="thumb_but" style="display: none;"><a onclick="Sys.loveQing(5640, true);" class="like" href="javascript:void(0);">9</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: 【最新图片】时髦“孔雀”来斗艳，争相开屏现锋芒！2015秋冬巴黎时装周秀场外街拍第三波：谁美谁雷，看过就能见分晓！_图1_海报时尚网图片库           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5640);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>9</span></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div style="left:371px;top:0px;" class="single" id="a-qing-wp-5641">
-                        <div onmouseover="Sys.showQingLove(5641,$(this));" style="width:310:px;height:516px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5641" class="thumb" title="点击查看详细">
-                                <img width="310" height="516" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_4f2396dec7_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_4f2396dec7_310.jpg" id="qing_image_5641" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5641, true);" class="like" href="javascript:void(0);">3</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: 【立体切绘】来自日本的立体切绘作家SouMa的作品，让人叹为观止的纸上艺术，一张白纸，一个世界。#暗黑贴条大赛#           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5641);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>3</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:742px;top:0px;" class="single" id="a-qing-wp-5642">
-                        <div onmouseover="Sys.showQingLove(5642,$(this));" style="width:310:px;height:465px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5642" class="thumb" title="点击查看详细">
-                                <img width="310" height="465" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_3c506bc67d_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_3c506bc67d_310.jpg" id="qing_image_5642" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5642, true);" class="like" href="javascript:void(0);">9</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: Taylor-Hill           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5642);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>9</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:742px;top:591px;" class="single" id="a-qing-wp-5643">
-                        <div onmouseover="Sys.showQingLove(5643,$(this));" style="width:310:px;height:464px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5643" class="thumb" title="点击查看详细">
-                                <img width="310" height="464" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_947658b72b_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_947658b72b_310.jpg" id="qing_image_5643" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5643, true);" class="like" href="javascript:void(0);">1</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: #服装搭配# 轻熟风格,毛衣,围巾搭配#半身裙,打底裤#+短靴           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5643);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>1</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:0px;top:643px;" class="single" id="a-qing-wp-5635">
-                        <div onmouseover="Sys.showQingLove(5635,$(this));" style="width:310:px;height:467px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5635" class="thumb" title="点击查看详细">
-                                <img width="310" height="467" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_2d4779ec20_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_2d4779ec20_310.jpg" id="qing_image_5635" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5635, true);" class="like" href="javascript:void(0);">0</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>:  #时尚#           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5635);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>0</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:371px;top:677px;" class="single" id="a-qing-wp-5636">
-                        <div onmouseover="Sys.showQingLove(5636,$(this));" style="width:310:px;height:466px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5636" class="thumb" title="点击查看详细">
-                                <img width="310" height="466" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_d19d9cf309_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_d19d9cf309_310.jpg" id="qing_image_5636" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5636, true);" class="like" href="javascript:void(0);">2</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: 享笑网2015-10-10#043494#           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5636);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>2</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:742px;top:1182px;" class="single" id="a-qing-wp-5637">
-                        <div onmouseover="Sys.showQingLove(5637,$(this));" style="width:310:px;height:465px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5637" class="thumb" title="点击查看详细">
-                                <img width="310" height="465" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_2647d49529_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_2647d49529_310.jpg" id="qing_image_5637" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5637, true);" class="like" href="javascript:void(0);">0</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>:  Ralph &amp; Russo Haute Couture Spring Summer 2014 Paris           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5637);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>0</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:0px;top:1236px;" class="single" id="a-qing-wp-5638">
-                        <div onmouseover="Sys.showQingLove(5638,$(this));" style="width:310:px;height:390px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5638" class="thumb" title="点击查看详细">
-                                <img width="310" height="390" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_9e58aa05c1_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_9e58aa05c1_310.jpg" id="qing_image_5638" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5638, true);" class="like" href="javascript:void(0);">1</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>:  龙   姓氏   图腾           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5638);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>1</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:371px;top:1270px;" class="single" id="a-qing-wp-5639">
-                        <div onmouseover="Sys.showQingLove(5639,$(this));" style="width:310:px;height:454px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5639" class="thumb" title="点击查看详细">
-                                <img width="310" height="454" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_f6f4abf9b4_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_f6f4abf9b4_310.jpg" id="qing_image_5639" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5639, true);" class="like" href="javascript:void(0);">7</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: (1)点点           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5639);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>7</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:0px;top:1752px;" class="single" id="a-qing-wp-5632">
-                        <div onmouseover="Sys.showQingLove(5632,$(this));" style="width:310:px;height:410px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5632" class="thumb" title="点击查看详细">
-                                <img width="310" height="410" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_9d82ad39c2_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_9d82ad39c2_310.jpg" id="qing_image_5632" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5632, true);" class="like" href="javascript:void(0);">3</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: 宝蓝色 美的不像话~~           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5632);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>3</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:742px;top:1791px;" class="single" id="a-qing-wp-5633">
-                        <div onmouseover="Sys.showQingLove(5633,$(this));" style="width:310:px;height:235px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5633" class="thumb" title="点击查看详细">
-                                <img width="310" height="235" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_cf00c8c2ae_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_cf00c8c2ae_310.jpg" id="qing_image_5633" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5633, true);" class="like" href="javascript:void(0);">8</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: 柯玛妮克 优雅格调系列 尖头蝴蝶结真皮单鞋 细高跟女鞋子K50407-tmall.com天猫           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5633);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>8</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:371px;top:1850px;" class="single" id="a-qing-wp-5634">
-                        <div onmouseover="Sys.showQingLove(5634,$(this));" style="width:310:px;height:465px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5634" class="thumb" title="点击查看详细">
-                                <img width="310" height="465" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_13d4fa6054_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_13d4fa6054_310.jpg" id="qing_image_5634" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5634, true);" class="like" href="javascript:void(0);">8</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: Dioptase crystal / Christmas Mine, Arizona | gems, stones, quartz           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5634);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>8</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:742px;top:2170px;" class="single" id="a-qing-wp-5630">
-                        <div onmouseover="Sys.showQingLove(5630,$(this));" style="width:310:px;height:271px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5630" class="thumb" title="点击查看详细">
-                                <img width="310" height="271" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_298ed7944e_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_298ed7944e_310.jpg" id="qing_image_5630" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5630, true);" class="like" href="javascript:void(0);">1</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: 铜、黄铜，植物#项链#           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5630);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>1</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:0px;top:2288px;" class="single" id="a-qing-wp-5631">
-                        <div onmouseover="Sys.showQingLove(5631,$(this));" style="width:310:px;height:310px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5631" class="thumb" title="点击查看详细">
-                                <img width="310" height="310" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_7f3f50ae83_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_7f3f50ae83_310.jpg" id="qing_image_5631" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5631, true);" class="like" href="javascript:void(0);">0</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: 享笑网2015-10-10#582951#           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5631);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>0</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="left:371px;top:2459px;" class="single" id="a-qing-wp-5628">
-                        <div onmouseover="Sys.showQingLove(5628,$(this));" style="width:310:px;height:463px" class="thumb-wrap">
-                            <a target="_blank" href="pic_detail.html?25-5628" class="thumb" title="点击查看详细">
-                                <img width="310" height="463" alt="背景图片" src="http://www.sharesmile.cn/public/qing//remote/201511/10-1/qing_10001_f0a873a179_310.jpg" class="qimg" data-url="/public/qing//remote/201511/10-1/qing_10001_f0a873a179_310.jpg" id="qing_image_5628" style="display: inline;">
-                            </a>
-                            <div class="thumb_but"><a onclick="Sys.loveQing(5628, true);" class="like" href="javascript:void(0);">1</a></div>
-                        </div>
-                        <div class="con">
-                            <div class="pl">
-                                <div class="user_pn">
-                                    <a rel="叫醒闹钟" href="javascript:void(0);" title="叫醒闹钟"><img alt="叫醒闹钟" title="叫醒闹钟" src="/public/userhead/120/177/head_10001_4c59b035cf.jpg"></a>
-                                </div>
-                                <div class="text" rel="beautbeau">
-                                    <span class="c_tx" title="叫醒闹钟">叫醒闹钟</span>: 欧美街拍精选           </div>
-                            </div>
-                            <div class="bottom clear">
-                                <a onclick="Sys.loveQing(5628);" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>1</span></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
             <div style="clear:both;"></div>
             <div class="loading">
                 <img src="images/loading.gif" alt="正在努力加载" />
@@ -582,6 +256,8 @@
 </noscript>
 <script type="text/javascript" language="javascript">
     $(document).ready(function(){
+        qtbt();
+        qtqbtp();
         $(".pb-ucenter").bind('mouseenter', function(){
             $(this).find('ul').stop().slideDown('fast');
             Sys.clearFlicker('uMessageCenter');
@@ -609,6 +285,74 @@
         }
         Sys.hide51();
     });
+    //倾听世界标题查询
+    function qtbt(){
+        $.ajax({
+            url:"/syqtsjbt",
+            type:"post",
+            async:false,
+            dataType:"json",
+            success:function (pager){
+                var str1 = "";
+                for (var i = 0; i < pager.length; i++) {
+                        str1 += "<li>"+
+                            "<a href='#' qid='8'>"+pager[i].text+
+                            "</a></li>";
+                }
+                $("#qtbt").html(str1);
+            },
+            error:function (){
+                alert("查询倾听世界标题出错,请检查程序或者网络");
+            }
+        });
+    }
+
+    //倾听世界查询
+    function qtqbtp(){
+        $.ajax({
+            url:"/qtqbtp",
+            type:"post",
+            async:false,
+            dataType:"json",
+            success:function (photo){
+                var info = "";
+                var count=0;
+                for (var i =0;i<photo.length;i++){
+                    if(count==0){
+                        //info+='<div style="left:0px;top:'+i/3*571+'px;" class="single" id="a-qing-wp-'+5640+i+'"><div onmouseover="Sys.showQingLove('+5640+i+',$(this));" style="width:310:px;height:465px" class="thumb-wrap" on="0"><a target="_blank" href="pic_detail.html?25-'+5640+i+'" class="thumb" title="点击查看详细"><img width="310" height="465" alt="背景图片" src="<%=request.getContextPath()%>'+photo[i].picurl+'" class="qimg"  id="qing_image_'+5640+i+'" style="display: inline;"></a><div class="thumb_but" style="display: none;"><a onclick="Sys.loveQing('+5640+i+', true);" class="like" href="javascript:void(0);">9</a></div></div><div class="con"><div class="pl"><div class="user_pn"><a rel="测试员" href="javascript:void(0);" title="测试员"><img alt="测试员" title="测试员" src="<%=request.getContextPath()%>/upimg/10.jpg"></a></div><div class="text" rel="beautbeau"><span class="c_tx" title="测试员">测试员</span>:</div></div><div class="bottom clear"><a onclick="Sys.loveQing('+5640+i+');" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span></span></a></div></div></div>';
+                        info+="<div style='left:0px;top:"+i/3*571+"px;' class='single' id='a-qing-wp-5640'><div onmouseover='Sys.showQingLove(5640,$(this));' style='width:310:px;height:465px' class='thumb-wrap' on='0'><a target='_blank' href='pic_detail.html?25-5640' class='thumb' title='点击查看详细'><img width='310' height='465' alt='背景图片' src='<%=request.getContextPath()%>"+photo[i].picurl+"' class='qimg'  id='qing_image_5640' style='display: inline;'></a><div class='thumb_but' style='display: none;'><a onclick='Sys.loveQing(5640, true);' class='like' href='javascript:void(0);'>"+photo[i].topiczancount+"</a></div></div><div class='con'><div class='pl'><div class='user_pn'><a rel='叫醒闹钟' href='javascript:void(0);' title='叫醒闹钟'><img alt='叫醒闹钟' title='叫醒闹钟' src='/images/head_10001_4c59b035cf_100.jpg'></a></div><div class='text' rel='beautbeau'><span class='c_tx' title='叫醒闹钟'>叫醒闹钟</span>:"+photo[i].topicnr+"</div></div><div class='bottom clear'><a onclick='dianzan("+photo[i].id+");' class='like f-r' href='javascript:void(0);'><i class='c_tx'>++1</i><span>"+photo[i].topiczancount+"</span></a></div></div></div>"
+                        count=1;
+                    }else if(count==1){
+                        //info+='<div style="left:371px;top:'+i/3*571+'px;" class="single" id="a-qing-wp-'+5640+i+'"><div onmouseover="Sys.showQingLove('+5640+i+',$(this));" style="width:310:px;height:465px" class="thumb-wrap" on="0"><a target="_blank" href="pic_detail.html?25-'+5640+i+'" class="thumb" title="点击查看详细"><img width="310" height="465" alt="背景图片" src="<%=request.getContextPath()%>'+photo[i].picurl+'" class="qimg"  id="qing_image_'+5640+i+'" style="display: inline;"></a><div class="thumb_but" style="display: none;"><a onclick="Sys.loveQing('+5640+i+', true);" class="like" href="javascript:void(0);">9</a></div></div><div class="con"><div class="pl"><div class="user_pn"><a rel="测试员" href="javascript:void(0);" title="测试员"><img alt="测试员" title="测试员" src="<%=request.getContextPath()%>/upimg/11.jpg"></a></div><div class="text" rel="beautbeau"><span class="c_tx" title="测试员">测试员</span>:</div></div><div class="bottom clear"><a onclick="Sys.loveQing('+5640+i+');" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>9</span></a></div></div></div>';
+                        info+="<div style='left:371px;top:"+i/3*571+"px;' class='single' id='a-qing-wp-5640'><div onmouseover='Sys.showQingLove(5640,$(this));' style='width:310:px;height:465px' class='thumb-wrap' on='0'><a target='_blank' href='pic_detail.html?25-5640' class='thumb' title='点击查看详细'><img width='310' height='465' alt='背景图片' src='<%=request.getContextPath()%>"+photo[i].picurl+"' class='qimg'  id='qing_image_5640' style='display: inline;'></a><div class='thumb_but' style='display: none;'><a onclick='Sys.loveQing(5640, true);' class='like' href='javascript:void(0);'>"+photo[i].topiczancount+"</a></div></div><div class='con'><div class='pl'><div class='user_pn'><a rel='叫醒闹钟' href='javascript:void(0);' title='叫醒闹钟'><img alt='叫醒闹钟' title='叫醒闹钟' src='/images/head_10001_4c59b035cf_100.jpg'></a></div><div class='text' rel='beautbeau'><span class='c_tx' title='叫醒闹钟'>叫醒闹钟</span>:"+photo[i].topicnr+"</div></div><div class='bottom clear'><a onclick='dianzan("+photo[i].id+");' class='like f-r' href='javascript:void(0);'><i class='c_tx'>++1</i><span>"+photo[i].topiczancount+"</span></a></div></div></div>"
+                        count=2;
+                    }else if(count==2){
+                       // info+='<div style="left:742px;top:'+(i-2)/3*571+'px;" class="single" id="a-qing-wp-'+5640+i+'"><div onmouseover="Sys.showQingLove('+5640+i+',$(this));" style="width:310:px;height:465px" class="thumb-wrap" on="0"><a target="_blank" href="pic_detail.html?25-'+5640+i+'" class="thumb" title="点击查看详细"><img width="310" height="465" alt="背景图片" src="<%=request.getContextPath()%>'+photo[i].picurl+'" class="qimg"  id="qing_image_'+5640+i+'" style="display: inline;"></a><div class="thumb_but" style="display: none;"><a onclick="Sys.loveQing('+5640+i+', true);" class="like" href="javascript:void(0);">9</a></div></div><div class="con"><div class="pl"><div class="user_pn"><a rel="测试员" href="javascript:void(0);" title="测试员"><img alt="测试员" title="测试员" src="<%=request.getContextPath()%>/upimg/12.jpg"></a></div><div class="text" rel="beautbeau"><span class="c_tx" title="测试员">测试员</span>:</div></div><div class="bottom clear"><a onclick="Sys.loveQing('+5640+i+');" class="like f-r" href="javascript:void(0);"><i class="c_tx">++1</i><span>9</span></a></div></div></div>';
+                        info+="<div style='left:742px;top:"+(i-2)/3*571+"px;' class='single' id='a-qing-wp-5640'><div onmouseover='Sys.showQingLove(5640,$(this));' style='width:310:px;height:465px' class='thumb-wrap' on='0'><a target='_blank' href='pic_detail.html?25-5640' class='thumb' title='点击查看详细'><img width='310' height='465' alt='背景图片' src='<%=request.getContextPath()%>"+photo[i].picurl+"' class='qimg'  id='qing_image_5640' style='display: inline;'></a><div class='thumb_but' style='display: none;'><a onclick='Sys.loveQing(5640, true);' class='like' href='javascript:void(0);'>"+photo[i].topiczancount+"</a></div></div><div class='con'><div class='pl'><div class='user_pn'><a rel='叫醒闹钟' href='javascript:void(0);' title='叫醒闹钟'><img alt='叫醒闹钟' title='叫醒闹钟' src='/images/head_10001_4c59b035cf_100.jpg'></a></div><div class='text' rel='beautbeau'><span class='c_tx' title='叫醒闹钟'>叫醒闹钟</span>:"+photo[i].topicnr+"</div></div><div class='bottom clear'><a onclick='dianzan("+photo[i].id+");' class='like f-r' href='javascript:void(0);'><i class='c_tx'>++1</i><span>"+photo[i].topiczancount+"</span></a></div></div></div>"
+                        count=0
+                    }
+                }
+                $("#pic-list").html(info);
+            },
+            error:function (){
+                alert("查询倾听世界所有图片出错,请检查程序或者网络");
+            }
+        });
+    }
+
+    //点赞
+    function dianzan(cid){
+        $.ajax({
+            url:"/top/updatezanById?id="+cid,
+            type:"post",
+            success:function (data){
+                location.reload();
+            },
+            error:function (){
+                alert("点赞时出错了")
+            }
+        })
+    }
 </script>
 </body>
 </html>

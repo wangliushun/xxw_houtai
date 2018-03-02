@@ -320,105 +320,8 @@
                 <div class="inx-qtsj-line pb-fr"></div>
                 <div class="inx-qtsj-line pb-fl"></div> <a href="/qingting"> <span class="chn">倾听世界</span> <br /> <span class="eng">LISTEN TO THE WORLD</span> </a> </h3>
             <div class="idx-qtsj pb-mt20 pb-after-clear">
-                <ul>
-                    <li>
-                        <a href="pic_detail.html?1">
-                        <img src="images/qing_10001_7b053ee001_310.jpg" class="pb-block" style="width:200px;" alt="美女,清纯唯美写真合集" />
-                        </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">美女</td>
-                                <td class="num">+35</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li> <a href="pic_detail.html?3"> <img src="images/qing_10001_2278c48f96_310.jpg" class="pb-block" style="width:200px;" alt="旅行,也许我就是一块老墨" /> </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">旅行</td>
-                                <td class="num">+54</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li> <a href="pic_detail.html?4"> <img src="images/qing_9999_6963913fb8_310.jpg" class="pb-block" style="width:200px;" alt="搞笑,证件照" /> </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">搞笑</td>
-                                <td class="num">+74</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li> <a href="pic_detail.html?6"> <img src="images/qing_10001_3f5af7636f_310.jpg" class="pb-block" style="width:200px;" alt="性感,享笑网2015-5-30#325806#" /> </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">性感</td>
-                                <td class="num">+33</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li style="margin-right:0;"> <a href="pic_detail.html?7"> <img src="images/qing_10001_5502d62ca8_310.jpg" class="pb-block" style="width:200px;" alt="情感,爱情就是一百多年的孤寂" /> </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">情感</td>
-                                <td class="num">+36</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li> <a href="pic_detail.html?10"> <img src="images/qing_10001_bcf83a76ac_310.jpg" class="pb-block" style="width:200px;" alt="艺术,中国书法家【郝天明】书法新作(妙笔生辉" /> </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">艺术</td>
-                                <td class="num">+25</td>
-                            </tr>
-                            </tbody>
-                        </table> </li>
-                    <li> <a href="pic_detail.html?13"> <img src="images/qing_10001_8b07d372b1_310.jpg" class="pb-block" style="width:200px;" alt="漫画,享笑网2015-6-8#529409#" /> </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">漫画</td>
-                                <td class="num">+26</td>
-                            </tr>
-                            </tbody>
-                        </table> </li>
-                    <li> <a href="pic_detail.html?15"> <img src="images/qing_10001_7610be26ad_310.jpg" class="pb-block" style="width:200px;" alt="超萌,步调一致" /> </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">超萌</td>
-                                <td class="num">+41</td>
-                            </tr>
-                            </tbody>
-                        </table> </li>
-                    <li> <a href="pic_detail.html?22"> <img src="images/qing_9999_578544d87f_310.jpg" class="pb-block" style="width:200px;" alt="回忆,如果你喜欢的人不喜欢你,那么就算全世界的人都喜欢你 也还是会觉得很孤单吧。" /> </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">回忆</td>
-                                <td class="num">+33</td>
-                            </tr>
-                            </tbody>
-                        </table> </li>
-                    <li style="margin-right:0;"> <a href="pic_detail.html?24"> <img src="images/qing_10001_4f8ce7bfa4_310.jpg" class="pb-block" style="width:200px;" alt="清新,最大的遗憾" /> </a>
-                        <table class="pb-opac70">
-                            <tbody>
-                            <tr>
-                                <td class="tle">清新</td>
-                                <td class="num">+75</td>
-                            </tr>
-                            </tbody>
-                        </table> </li>
+                <ul id="qtsj">
+
                 </ul>
             </div>
             <div style="clear:both;"></div>
@@ -586,6 +489,7 @@
 </noscript>
 <script type="text/javascript" language="javascript">
     $(document).ready(function() {
+        queryqt();
         $(".pb-ucenter").bind('mouseenter', function() {
             $(this).find('ul').stop().slideDown('fast');
             Sys.clearFlicker('uMessageCenter');
@@ -613,6 +517,39 @@
         }
         Sys.hide51();
     });
+
+    //倾听世界查询
+    function queryqt(){
+        $.ajax({
+            url:"/syqtsj",
+            type:"post",
+            async:false,
+            dataType:"json",
+            success:function (pager){
+                var str = "";
+                for (var i = 0; i < pager.length; i++) {
+                    if(i==4||i==9||i==14){
+                        str += "<li style='margin-right:0;'><a href='/qingting'><img src=<%=request.getContextPath()%>"+pager[i].fmimgurl+" class='pb-block' style='width:200px;' /></a>"+
+                            "<table class='pb-opac70'><tbody><tr>"+
+                            "<td class='tle'>"+pager[i].typename+"</td>"+
+                            "<td class='num'>"+pager[i].zanzong+"</td>"+
+                            "</tr></tbody></table></li>";
+                    }else{
+                        str += "<li><a href='/qingting'><img src=<%=request.getContextPath()%>"+pager[i].fmimgurl+" class='pb-block' style='width:200px;' /></a>"+
+                            "<table class='pb-opac70'><tbody><tr>"+
+                            "<td class='tle'>"+pager[i].typename+"</td>"+
+                            "<td class='num'>"+pager[i].zanzong+"</td>"+
+                            "</tr></tbody></table></li>";
+                    }
+                }
+                $("#qtsj").html(str);
+            },
+            error:function (){
+                alert("查询倾听世界出错,请检查程序或者网络");
+            }
+        });
+    }
+
 </script>
 </body>
 </html>

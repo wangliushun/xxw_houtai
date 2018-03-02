@@ -13,6 +13,7 @@ public class Topic {
     //业务字段
     private String upusername;//上传人(关联管理员)
 
+
     public Integer getId() {
         return id;
     }

@@ -1,7 +1,7 @@
 package com.jk.controller;
 
-import com.jk.pojo.MenuTree;
-import com.jk.pojo.TestMongo;
+import com.alibaba.fastjson.JSONObject;
+import com.jk.pojo.*;
 import com.jk.service.MenuTreeService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -34,6 +35,31 @@ public class MenuTreeController {
         return "../../index3";
     }
 
+
+    //show页面展示倾听世界
+    @RequestMapping("syqtsj")
+    @ResponseBody
+    public List<PicGroup> syqtsj(){
+        List<PicGroup> t=menuTreeService.syqtsj();
+        return t;
+    }
+
+
+    //qingting页面展示倾听世界标题
+    @RequestMapping("syqtsjbt")
+    @ResponseBody
+    public List<ZmenuPoJo> syqtsjbt(){
+        List<ZmenuPoJo> z=menuTreeService.syqtsjbt();
+        return z;
+    }
+
+    //qingting页面展示所有倾听世界图片
+    @RequestMapping("qtqbtp")
+    @ResponseBody
+    public List<Topic> qtqbtp(){
+        List<Topic> to=menuTreeService.qtqbtp();
+        return to;
+    }
     /**
      * 跳转后台管理主页面
      * @return
@@ -84,15 +110,6 @@ public class MenuTreeController {
     }*/
     /**
      * 跳转前台主页面
-     * @return
-     */
-    @RequestMapping("/to")
-    public String to(){
-        return "qt/show";
-    }
-
-    /**
-     * 跳转show页面
      * @return
      */
     @RequestMapping("show")
